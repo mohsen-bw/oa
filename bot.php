@@ -346,7 +346,7 @@ if ($command == '/menu2') {
                     'body' => 
                     array (
                       'type' => 'box',
-                      'layout' => 'vertical',
+                      'layout' => 'horizontal',
                       'contents' => 
                       array (
                         0 => 
