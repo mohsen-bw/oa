@@ -312,6 +312,55 @@ if ($command == '/menu') {
         )
     );
 }
+if ($command == '/menu2') {
+    $text .= "「Keyword RpdBot~」\n\n";
+    $text .= "- Help\n";
+    $text .= "- /jam \n";
+    $text .= "- /quotes \n";
+    $text .= "- /say [teks] \n";
+    $text .= "- /definition [teks] \n";
+    $text .= "- /cooltext [teks] \n";
+    $text .= "- /shalat [lokasi] \n";
+    $text .= "- /qiblat [lokasi] \n";
+    $text .= "- /film [teks] \n";
+    $text .= "- /qr [teks] \n";
+    $text .= "- /neon [teks] \n";
+    $text .= "- /ahli [nama] \n";
+    $text .= "- /arti-nama [nama] \n";
+    $text .= "- /light [teks] \n";
+    $text .= "- /film-syn [Judul] \n";
+    $text .= "- /zodiak [tanggal lahir] \n";
+        $text .= "- /instagram [unsername] \n";
+        $text .= "- /jadwaltv [stasiun] \n";
+    $text .= "- /creator \n";
+    $text .= "\n「Done~」";
+    $balas = array(
+        'replyToken' => $replyToken,
+        'messages' => array(
+            array (
+                  'type' => 'flex',
+                  'altText' => 'this is a flex message',
+                  'contents' => 
+                  array (
+                    'type' => 'bubble',
+                    'body' => 
+                    array (
+                      'type' => 'box',
+                      'layout' => 'vertical',
+                      'contents' => 
+                      array (
+                        0 => 
+                        array (
+                          'type' => 'text',
+                          'text' => $text,
+                        ),
+                      ),
+                    ),
+                  ),
+                )
+        )
+    );
+}
 if ($type == 'join') {
     $text = "Terimakasih Telah invite aku ke group ini silahkan ketik Help untuk lihat command aku :)";
     $balas = array(
