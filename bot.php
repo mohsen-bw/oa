@@ -802,7 +802,7 @@ if($message['type']=='text') {
             'messages' => array(
                 array (
                       'type' => 'imagemap',
-                      'baseUrl' => 'https://bpptik.kominfo.go.id/wp-content/uploads/2016/09/Programmer.jpg',
+                      'baseUrl' => 'https://static.zerochan.net/Touken.Ranbu.full.2275743.jpg',
                       'altText' => 'This is an imagemap',
                       'baseSize' => 
                       array (
