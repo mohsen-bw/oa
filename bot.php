@@ -312,55 +312,8 @@ if ($command == '/menu') {
         )
     );
 }
-if ($command == '/menu2') {
-    $text .= """「Keyword RpdBot~」
-    - Help
-    - /jam 
-    - /quotes 
-    - /say [teks] 
-    - /definition [teks] 
-    - /cooltext [teks] 
-    - /shalat [lokasi] 
-    - /qiblat [lokasi] 
-    - /film [teks] 
-    - /qr [teks] 
-    - /neon [teks] 
-    - /ahli [nama] 
-    - /arti-nama [nama] 
-    - /light [teks] 
-    - /film-syn [Judul] 
-    - /zodiak [tanggal lahir] 
-    - /instagram [unsername] 
-    - /jadwaltv [stasiun]
-    - /creator
-    「Done~」"""
-    $balas = array(
-        'replyToken' => $replyToken,
-        'messages' => array(
-            array (
-                  'type' => 'flex',
-                  'altText' => 'this is a flex message',
-                  'contents' => 
-                  array (
-                    'type' => 'bubble',
-                    'body' => 
-                    array (
-                      'type' => 'box',
-                      'layout' => 'horizontal',
-                      'contents' => 
-                      array (
-                        0 => 
-                        array (
-                          'type' => 'text',
-                          'text' => $text,
-                        ),
-                      ),
-                    ),
-                  ),
-                )
-        )
-    );
-}
+
+
 if ($type == 'join') {
     $text = "Terimakasih Telah invite aku ke group ini silahkan ketik Help untuk lihat command aku :)";
     $balas = array(
