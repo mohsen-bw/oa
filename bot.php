@@ -796,7 +796,41 @@ if($message['type']=='text') {
     }
 }
 if($message['type']=='text') {
-        if ($command == '/textx') {
+        if ($command == '/109') {
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array (
+                      'type' => 'imagemap',
+                      'baseUrl' => 'https://example.com/bot/images/rm001',
+                      'altText' => 'This is an imagemap',
+                      'baseSize' => 
+                      array (
+                        'height' => 1040,
+                        'width' => 1040,
+                      ),
+                      'actions' => 
+                      array (
+                        0 => 
+                        array (
+                          'type' => 'message',
+                          'text' => 'Hello',
+                          'area' => 
+                          array (
+                            'x' => 520,
+                            'y' => 0,
+                            'width' => 520,
+                            'height' => 1040,
+                          ),
+                        ),
+                      ),
+                    )
+            )
+        );
+    }
+}
+if($message['type']=='text') {
+        if ($command == 'Help') {
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
@@ -815,7 +849,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'Instagram',
-                              'text' => '/instagram rhnprmd',
+                              'text' => 'Contoh : /instagram rhnprmd',
                             ),
                           ),
                           1 => 
@@ -825,7 +859,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'Neon Text',
-                              'text' => '/neon RpdBot Mantap',
+                              'text' => 'Contoh : /neon RpdBot Mantap',
                             ),
                           ),
                           2 => 
@@ -835,7 +869,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'TTS',
-                              'text' => '/say Halo semuanya',
+                              'text' => 'Contoh : /say Halo semuanya',
                             ),
                           ),
                           3 => 
