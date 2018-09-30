@@ -810,7 +810,7 @@ if($message['type']=='text') {
                         array (
                           0 => 
                           array (
-                            'imageUrl' => 'https://example.com/bot/images/item1.jpg',
+                            'imageUrl' => 'https://pa1.narvii.com/6342/76ec050c2d184bbe728f7cedd48aadc29250b325_hq.gif',
                             'action' => 
                             array (
                               'type' => 'message',
@@ -820,7 +820,7 @@ if($message['type']=='text') {
                           ),
                           1 => 
                           array (
-                            'imageUrl' => 'https://example.com/bot/images/item2.jpg',
+                            'imageUrl' => 'https://rest.farzain.com/api/photofunia/neon_sign.php?text=RpdBot&apikey=fDh6y7ZwXJ24eiArhGEJ55HgA',
                             'action' => 
                             array (
                               'type' => 'message',
@@ -830,7 +830,7 @@ if($message['type']=='text') {
                           ),
                           2 => 
                           array (
-                            'imageUrl' => 'https://example.com/bot/images/item3.jpg',
+                            'imageUrl' => 'https://is5-ssl.mzstatic.com/image/thumb/Purple118/v4/64/c9/6f/64c96f0c-0202-09f6-78b5-1ef915086215/Prod-1x_U007emarketing-85-220-0-5.png/246x0w.jpg',
                             'action' => 
                             array (
                               'type' => 'uri',
@@ -866,7 +866,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'Instagram',
-                              'text' => '/instagram [unsername]\nContoh:\n/instagram rhnprmd',
+                              'text' => '/instagram [unsername]',
                             ),
                           ),
                           1 => 
@@ -876,7 +876,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'Neon Teks',
-                              'text' => '/neon [text]\nContoh:\n/neon RpdBot Mantap',
+                              'text' => '/neon [text]',
                             ),
                           ),
                           2 => 
@@ -885,8 +885,8 @@ if($message['type']=='text') {
                             'action' => 
                             array (
                               'type' => 'message',
-                              'label' => 'Text To Spech',
-                              'text' => '/say [text]\nContoh:\n/say RpdBot Mantap',
+                              'label' => 'TTS',
+                              'text' => '/say [text]',
                             ),
                           ),
                           3 => 
