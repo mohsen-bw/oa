@@ -802,7 +802,7 @@ if($message['type']=='text') {
             'messages' => array(
                 array (
                       'type' => 'imagemap',
-                      'baseUrl' => 'https://example.com/bot/images/rm001',
+                      'baseUrl' => 'https://bpptik.kominfo.go.id/wp-content/uploads/2016/09/Programmer.jpg',
                       'altText' => 'This is an imagemap',
                       'baseSize' => 
                       array (
