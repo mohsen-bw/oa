@@ -814,8 +814,8 @@ if($message['type']=='text') {
                             'action' => 
                             array (
                               'type' => 'message',
-                              'label' => 'Yes',
-                              'text' => 'yes\nIsya\nya',
+                              'label' => 'Instagram',
+                              'text' => '/instagram [unsername]',
                             ),
                           ),
                           1 => 
@@ -824,8 +824,8 @@ if($message['type']=='text') {
                             'action' => 
                             array (
                               'type' => 'message',
-                              'label' => 'Yes',
-                              'text' => 'yes',
+                              'label' => 'Neon Text',
+                              'text' => '/neon [text]',
                             ),
                           ),
                           2 => 
@@ -834,8 +834,8 @@ if($message['type']=='text') {
                             'action' => 
                             array (
                               'type' => 'message',
-                              'label' => 'Yes',
-                              'text' => 'yes',
+                              'label' => 'TTS',
+                              'text' => '/say [text]',
                             ),
                           ),
                           3 => 
@@ -844,8 +844,8 @@ if($message['type']=='text') {
                             'action' => 
                             array (
                               'type' => 'message',
-                              'label' => 'Yes',
-                              'text' => 'yes',
+                              'label' => 'Jam Indonesia',
+                              'text' => '/jam',
                             ),
                           ),
                           4 => 
@@ -854,8 +854,8 @@ if($message['type']=='text') {
                             'action' => 
                             array (
                               'type' => 'message',
-                              'label' => 'Yes',
-                              'text' => 'yes',
+                              'label' => 'Creator',
+                              'text' => '/creator',
                             ),
                           ),
                           5 => 
@@ -863,9 +863,9 @@ if($message['type']=='text') {
                             'imageUrl' => 'https://pa1.narvii.com/6342/76ec050c2d184bbe728f7cedd48aadc29250b325_hq.gif',
                             'action' => 
                             array (
-                              'type' => 'uri',
-                              'label' => 'View detail',
-                              'uri' => 'http://example.com/page/222',
+                              'type' => 'message',
+                              'label' => 'More Menu',
+                              'text' => '/menu',
                             ),
                           ),
                         ),
