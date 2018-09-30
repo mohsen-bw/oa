@@ -844,7 +844,7 @@ if($message['type']=='text') {
                             'action' => 
                             array (
                               'type' => 'message',
-                              'label' => 'Jam Indonesia',
+                              'label' => 'Jam',
                               'text' => '/jam',
                             ),
                           ),
