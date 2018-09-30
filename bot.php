@@ -911,7 +911,7 @@ if($message['type']=='text') {
 }
 #----------------------------------#
 if($message['type']=='text') {
-        if ($command == 'Help') {
+        if ($command == '/nkn') {
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
