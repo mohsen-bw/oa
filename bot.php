@@ -780,6 +780,7 @@ if($message['type']=='text') {
         ); 
     }
 }
+#----------------------------------#
 if($message['type']=='text') {
         if ($command == '/arti-nama') {
         $result = arti($options);
@@ -790,6 +791,57 @@ if($message['type']=='text') {
                     'type' => 'text',
                     'text' => $result
                 )
+            )
+        );
+    }
+}
+#----------------------------------#
+if($message['type']=='text') {
+        if ($command == '/imagemap') {
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array (
+                      'type' => 'template',
+                      'altText' => 'this is a image carousel template',
+                      'template' => 
+                      array (
+                        'type' => 'image_carousel',
+                        'columns' => 
+                        array (
+                          0 => 
+                          array (
+                            'imageUrl' => 'https://example.com/bot/images/item1.jpg',
+                            'action' => 
+                            array (
+                              'type' => 'message',
+                              'label' => 'Yes',
+                              'text' => 'yes',
+                            ),
+                          ),
+                          1 => 
+                          array (
+                            'imageUrl' => 'https://example.com/bot/images/item2.jpg',
+                            'action' => 
+                            array (
+                              'type' => 'message',
+                              'label' => 'Yes',
+                              'text' => 'yes',
+                            ),
+                          ),
+                          2 => 
+                          array (
+                            'imageUrl' => 'https://example.com/bot/images/item3.jpg',
+                            'action' => 
+                            array (
+                              'type' => 'uri',
+                              'label' => 'View detail',
+                              'uri' => 'http://example.com/page/222',
+                            ),
+                          ),
+                        ),
+                      ),
+                    )
             )
         );
     }
