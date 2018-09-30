@@ -815,7 +815,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'Instagram',
-                              'text' => '/instagram [unsername]',
+                              'text' => '/instagram rhnprmd',
                             ),
                           ),
                           1 => 
@@ -825,7 +825,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'Neon Text',
-                              'text' => '/neon [text]',
+                              'text' => '/neon RpdBot Mantap',
                             ),
                           ),
                           2 => 
@@ -835,7 +835,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'TTS',
-                              'text' => '/say [text]',
+                              'text' => '/say Halo semuanya',
                             ),
                           ),
                           3 => 
