@@ -313,27 +313,27 @@ if ($command == '/menu') {
     );
 }
 if ($command == '/menu2') {
-    $text .= "「Keyword RpdBot~」\n\n";
-    $text .= "- Help\n";
-    $text .= "- /jam \n";
-    $text .= "- /quotes \n";
-    $text .= "- /say [teks] \n";
-    $text .= "- /definition [teks] \n";
-    $text .= "- /cooltext [teks] \n";
-    $text .= "- /shalat [lokasi] \n";
-    $text .= "- /qiblat [lokasi] \n";
-    $text .= "- /film [teks] \n";
-    $text .= "- /qr [teks] \n";
-    $text .= "- /neon [teks] \n";
-    $text .= "- /ahli [nama] \n";
-    $text .= "- /arti-nama [nama] \n";
-    $text .= "- /light [teks] \n";
-    $text .= "- /film-syn [Judul] \n";
-    $text .= "- /zodiak [tanggal lahir] \n";
-        $text .= "- /instagram [unsername] \n";
-        $text .= "- /jadwaltv [stasiun] \n";
-    $text .= "- /creator \n";
-    $text .= "\n「Done~」";
+    $text .= """「Keyword RpdBot~」
+    - Help
+    - /jam 
+    - /quotes 
+    - /say [teks] 
+    - /definition [teks] 
+    - /cooltext [teks] 
+    - /shalat [lokasi] 
+    - /qiblat [lokasi] 
+    - /film [teks] 
+    - /qr [teks] 
+    - /neon [teks] 
+    - /ahli [nama] 
+    - /arti-nama [nama] 
+    - /light [teks] 
+    - /film-syn [Judul] 
+    - /zodiak [tanggal lahir] 
+    - /instagram [unsername] 
+    - /jadwaltv [stasiun]
+    - /creator
+    「Done~」"""
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
