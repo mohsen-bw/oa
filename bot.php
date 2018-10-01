@@ -35,6 +35,30 @@ function tv($keyword) {
     $result .= "\n「Done~」";
     return $result;
 }
+function lirik($keyword) {
+    $uri = "https://rest.farzain.com/api/joox.php?id=" . $keyword . "&apikey=fDh6y7ZwXJ24eiArhGEJ55HgA";
+    $response = Unirest\Request::get("$uri");
+    $json = json_decode($response->raw_body, true);
+    $result = "「Lirik Lagu」";
+    $result .= "\nStatus : Success!!!";
+    $result .= "\nPenyanyi : ";
+    $result .= $json['info']['penyanyi'];
+    $result .= "\nJudul : ";
+    $result .= $json['info']['judul'];
+    $result .= "\nAlbum : ";
+    $result .= $json['info']['album'];
+    $result .= "\n\nLirik : ";
+    $result .= $json['lirik'];
+    $result .= "\n「Done~」";
+    return $result;
+}
+function imgj($keyword) {
+    $uri = "https://rest.farzain.com/api/joox.php?id=" . $keyword . "&apikey=fDh6y7ZwXJ24eiArhGEJ55HgA";
+    $response = Unirest\Request::get("$uri");
+    $json = json_decode($response->raw_body, true);
+    $result = $json['gambar'];
+    return $result;
+}
 #-------------------------[Open]-------------------------#
 function coolt($keyword) { 
     $uri = "https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20171227T171852Z.fda4bd604c7bf41f.f939237fb5f802608e9fdae4c11d9dbdda94a0b5&text=" . $keyword . "&lang=id-id"; 
@@ -312,8 +336,6 @@ if ($command == '/menu') {
         )
     );
 }
-
-
 if ($type == 'join') {
     $text = "Terimakasih Telah invite aku ke group ini silahkan ketik Help untuk lihat command aku :)";
     $balas = array(
@@ -661,6 +683,41 @@ if($message['type']=='text') {
         );
     }
 }
+if($message['type']=='text') {
+        if ($command == '/lirik') {
+
+        $result = lirik($options);
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'text',
+                    'text' => $result
+                )
+            )
+        );
+    }
+}
+if($message['type']=='text') {
+        if ($command == '/lirik2') {
+        $result2 = imgj($options);
+        $result = lirik($options);
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                  'type' => 'image',
+                  'originalContentUrl' => $result2,
+                  'previewImageUrl' => $result2
+                ),
+                array(
+                    'type' => 'text',
+                    'text' => $result
+                )
+            )
+        );
+    }
+}
 #-------------------------[Close]-------------------------#
 #-------------------------[Open]-------------------------#
 if($message['type']=='text') {
@@ -798,41 +855,7 @@ if($message['type']=='text') {
     }
 }
 if($message['type']=='text') {
-        if ($command == '/109') {
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array (
-                      'type' => 'imagemap',
-                      'baseUrl' => 'https://static.zerochan.net/Touken.Ranbu.full.2275743.jpg',
-                      'altText' => 'This is an imagemap',
-                      'baseSize' => 
-                      array (
-                        'height' => 1040,
-                        'width' => 1040,
-                      ),
-                      'actions' => 
-                      array (
-                        0 => 
-                        array (
-                          'type' => 'message',
-                          'text' => 'Hello',
-                          'area' => 
-                          array (
-                            'x' => 520,
-                            'y' => 0,
-                            'width' => 520,
-                            'height' => 1040,
-                          ),
-                        ),
-                      ),
-                    )
-            )
-        );
-    }
-}
-if($message['type']=='text') {
-        if ($command == 'Help') {
+        if ($command == '/textx') {
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
@@ -851,7 +874,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'Instagram',
-                              'text' => 'Contoh : /instagram rhnprmd',
+                              'text' => '/instagram [unsername]',
                             ),
                           ),
                           1 => 
@@ -861,7 +884,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'Neon Text',
-                              'text' => 'Contoh : /neon RpdBot Mantap',
+                              'text' => '/neon [text]',
                             ),
                           ),
                           2 => 
@@ -871,7 +894,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'TTS',
-                              'text' => 'Contoh : /say Halo semuanya',
+                              'text' => '/say [text]',
                             ),
                           ),
                           3 => 
@@ -880,7 +903,7 @@ if($message['type']=='text') {
                             'action' => 
                             array (
                               'type' => 'message',
-                              'label' => 'Jam',
+                              'label' => 'Jam Indonesia',
                               'text' => '/jam',
                             ),
                           ),
@@ -913,7 +936,7 @@ if($message['type']=='text') {
 }
 #----------------------------------#
 if($message['type']=='text') {
-        if ($command == '/nkn') {
+        if ($command == 'Help') {
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
