@@ -339,6 +339,8 @@ if ($command == '/menu') {
     $text .= "- /arti-nama [nama] \n";
     $text .= "- /light [teks] \n";
     $text .= "- /film-syn [Judul] \n";
+    $text .= "- /lirik [Judul] \n";
+    $text .= "- /wikipedia [Judul] \n";
     $text .= "- /zodiak [tanggal lahir] \n";
         $text .= "- /instagram [unsername] \n";
         $text .= "- /jadwaltv [stasiun] \n";
@@ -347,10 +349,28 @@ if ($command == '/menu') {
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
-            array(
-                'type' => 'text',
-                'text' => $text
-            )
+            array (
+  'type' => 'flex',
+  'altText' => 'this is a flex message',
+  'contents' => 
+  array (
+    'type' => 'bubble',
+    'body' => 
+    array (
+      'type' => 'box',
+      'layout' => 'vertical',
+      'contents' => 
+      array (
+        0 => 
+        array (
+          'type' => 'text',
+          'text' => $text,
+          'wrap' => True,
+        ),
+      ),
+    ),
+  ),
+)
         )
     );
 }
@@ -359,10 +379,28 @@ if ($type == 'join') {
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
-            array(
-                'type' => 'text',
-                'text' => $text
-            )
+            array (
+  'type' => 'flex',
+  'altText' => 'this is a flex message',
+  'contents' => 
+  array (
+    'type' => 'bubble',
+    'body' => 
+    array (
+      'type' => 'box',
+      'layout' => 'vertical',
+      'contents' => 
+      array (
+        0 => 
+        array (
+          'type' => 'text',
+          'text' => $text,
+          'wrap' => True,
+        ),
+      ),
+    ),
+  ),
+)
         )
     );
 }
@@ -373,10 +411,28 @@ if($message['type']=='text') {
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
-                array(
-                    'type' => 'text',
-                    'text'  => $result
-                )
+                array (
+  'type' => 'flex',
+  'altText' => 'this is a flex message',
+  'contents' => 
+  array (
+    'type' => 'bubble',
+    'body' => 
+    array (
+      'type' => 'box',
+      'layout' => 'vertical',
+      'contents' => 
+      array (
+        0 => 
+        array (
+          'type' => 'text',
+          'text' => $result,
+          'wrap' => True,
+        ),
+      ),
+    ),
+  ),
+)
             )
         );
     }
@@ -479,10 +535,28 @@ if($message['type']=='text') {
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
-                array( 
-                    'type' => 'text',
-                    'text' => $result
-                )
+                array (
+  'type' => 'flex',
+  'altText' => 'this is a flex message',
+  'contents' => 
+  array (
+    'type' => 'bubble',
+    'body' => 
+    array (
+      'type' => 'box',
+      'layout' => 'vertical',
+      'contents' => 
+      array (
+        0 => 
+        array (
+          'type' => 'text',
+          'text' => $result,
+          'wrap' => True,
+        ),
+      ),
+    ),
+  ),
+)
             )
         );
     }
@@ -619,10 +693,28 @@ if($message['type']=='text') {
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
-                array(
-                    'type' => 'text',
-                    'text' => $result
-                )
+                array (
+  'type' => 'flex',
+  'altText' => 'this is a flex message',
+  'contents' => 
+  array (
+    'type' => 'bubble',
+    'body' => 
+    array (
+      'type' => 'box',
+      'layout' => 'vertical',
+      'contents' => 
+      array (
+        0 => 
+        array (
+          'type' => 'text',
+          'text' => $result,
+          'wrap' => True,
+        ),
+      ),
+    ),
+  ),
+)
             )
         );
     }
@@ -639,10 +731,28 @@ if($message['type']=='text') {
                   'originalContentUrl' => $result2,
                   'previewImageUrl' => $result2
                 ),
-                array(
-                    'type' => 'text',
-                    'text' => $result
-                )
+                array (
+  'type' => 'flex',
+  'altText' => 'this is a flex message',
+  'contents' => 
+  array (
+    'type' => 'bubble',
+    'body' => 
+    array (
+      'type' => 'box',
+      'layout' => 'vertical',
+      'contents' => 
+      array (
+        0 => 
+        array (
+          'type' => 'text',
+          'text' => $result,
+          'wrap' => True,
+        ),
+      ),
+    ),
+  ),
+)
             )
         );
     }
@@ -690,10 +800,28 @@ if($message['type']=='text') {
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
-                array( 
-                    'type' => 'text',
-                    'text' => $result
-                )
+                array (
+  'type' => 'flex',
+  'altText' => 'this is a flex message',
+  'contents' => 
+  array (
+    'type' => 'bubble',
+    'body' => 
+    array (
+      'type' => 'box',
+      'layout' => 'vertical',
+      'contents' => 
+      array (
+        0 => 
+        array (
+          'type' => 'text',
+          'text' => $result,
+          'wrap' => True,
+        ),
+      ),
+    ),
+  ),
+)
             )
         );
     }
@@ -707,10 +835,28 @@ if($message['type']=='text') {
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
-                array(
-                    'type' => 'text',
-                    'text' => $result
-                )
+                array (
+  'type' => 'flex',
+  'altText' => 'this is a flex message',
+  'contents' => 
+  array (
+    'type' => 'bubble',
+    'body' => 
+    array (
+      'type' => 'box',
+      'layout' => 'vertical',
+      'contents' => 
+      array (
+        0 => 
+        array (
+          'type' => 'text',
+          'text' => $result,
+          'wrap' => True,
+        ),
+      ),
+    ),
+  ),
+)
             )
         );
     }
@@ -724,10 +870,28 @@ if($message['type']=='text') {
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
-                array(
-                    'type' => 'text',
-                    'text' => $result
-                )
+                array (
+  'type' => 'flex',
+  'altText' => 'this is a flex message',
+  'contents' => 
+  array (
+    'type' => 'bubble',
+    'body' => 
+    array (
+      'type' => 'box',
+      'layout' => 'vertical',
+      'contents' => 
+      array (
+        0 => 
+        array (
+          'type' => 'text',
+          'text' => $result,
+          'wrap' => True,
+        ),
+      ),
+    ),
+  ),
+)
             )
         );
     }
@@ -739,10 +903,28 @@ if($message['type']=='text') {
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
-                array(
-                    'type' => 'text',
-                    'text' => $result
-                )
+                array (
+  'type' => 'flex',
+  'altText' => 'this is a flex message',
+  'contents' => 
+  array (
+    'type' => 'bubble',
+    'body' => 
+    array (
+      'type' => 'box',
+      'layout' => 'vertical',
+      'contents' => 
+      array (
+        0 => 
+        array (
+          'type' => 'text',
+          'text' => $result,
+          'wrap' => True,
+        ),
+      ),
+    ),
+  ),
+)
             )
         );
     }
