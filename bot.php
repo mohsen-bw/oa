@@ -685,21 +685,6 @@ if($message['type']=='text') {
 }
 if($message['type']=='text') {
         if ($command == '/lirik') {
-
-        $result = lirik($options);
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array(
-                    'type' => 'text',
-                    'text' => $result
-                )
-            )
-        );
-    }
-}
-if($message['type']=='text') {
-        if ($command == '/lirik2') {
         $result2 = imgj($options);
         $result = lirik($options);
         $balas = array(
@@ -936,7 +921,7 @@ if($message['type']=='text') {
 }
 #----------------------------------#
 if($message['type']=='text') {
-        if ($command == 'Help') {
+        if ($command == 'Help' || $command == 'Help') {
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
@@ -955,7 +940,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'Instagram',
-                              'text' => '/instagram [unsername]',
+                              'text' => 'Contoh: /instagram jokowi',
                             ),
                           ),
                           1 => 
@@ -965,7 +950,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'Neon Teks',
-                              'text' => '/neon [text]',
+                              'text' => 'Contoh: /neon RpdBot Mantap',
                             ),
                           ),
                           2 => 
@@ -975,7 +960,7 @@ if($message['type']=='text') {
                             array (
                               'type' => 'message',
                               'label' => 'TTS',
-                              'text' => '/say [text]',
+                              'text' => 'Contoh: /say Mantap Jiwa',
                             ),
                           ),
                           3 => 
@@ -984,7 +969,7 @@ if($message['type']=='text') {
                             'action' => 
                             array (
                               'type' => 'message',
-                              'label' => 'Jam Indonesia',
+                              'label' => 'Jam Indo',
                               'text' => '/jam',
                             ),
                           ),
@@ -999,6 +984,46 @@ if($message['type']=='text') {
                             ),
                           ),
                           5 => 
+                          array (
+                            'imageUrl' => 'https://bpptik.kominfo.go.id/wp-content/uploads/2016/09/Programmer.jpg',
+                            'action' => 
+                            array (
+                              'type' => 'message',
+                              'label' => 'Lirik',
+                              'text' => 'Contoh: /lirik asal kau bahagia',
+                            ),
+                          ),
+                          6 => 
+                          array (
+                            'imageUrl' => 'https://bpptik.kominfo.go.id/wp-content/uploads/2016/09/Programmer.jpg',
+                            'action' => 
+                            array (
+                              'type' => 'message',
+                              'label' => 'Music',
+                              'text' => 'Contoh: /song asal kau bahagia',
+                            ),
+                          ),
+                          7 => 
+                          array (
+                            'imageUrl' => 'https://bpptik.kominfo.go.id/wp-content/uploads/2016/09/Programmer.jpg',
+                            'action' => 
+                            array (
+                              'type' => 'message',
+                              'label' => 'Shalat',
+                              'text' => 'Contoh: /shalat Bandung',
+                            ),
+                          ),
+                          8 => 
+                          array (
+                            'imageUrl' => 'https://bpptik.kominfo.go.id/wp-content/uploads/2016/09/Programmer.jpg',
+                            'action' => 
+                            array (
+                              'type' => 'message',
+                              'label' => 'Jadwal Tv',
+                              'text' => 'Contoh: /jadwaltv rcti',
+                            ),
+                          ),
+                          9 => 
                           array (
                             'imageUrl' => 'https://pa1.narvii.com/6342/76ec050c2d184bbe728f7cedd48aadc29250b325_hq.gif',
                             'action' => 
