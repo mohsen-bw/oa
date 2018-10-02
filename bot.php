@@ -28,7 +28,8 @@ function tv($keyword) {
     $response = Unirest\Request::get("$uri");
     $json = json_decode($response->raw_body, true);
     $result = "「Jadwal AcaraTV」";
-    $result .= "\nStatus : Success!!!";
+    $result .= "\nStatus : ";
+    $result .= $json['status'];
     $result .= "\nStasiun : " . $keyword . "-";
     $result .= "\nJadwal : ";
     $result .= $json['result'];
@@ -40,7 +41,8 @@ function lirik($keyword) {
     $response = Unirest\Request::get("$uri");
     $json = json_decode($response->raw_body, true);
     $result = "「Lirik Lagu」";
-    $result .= "\nStatus : Success!!!";
+    $result .= "\nStatus : ";
+    $result .= $json['status'];
     $result .= "\nPenyanyi : ";
     $result .= $json['info']['penyanyi'];
     $result .= "\nJudul : ";
@@ -120,7 +122,8 @@ function quotes($keyword) {
     $response = Unirest\Request::get("$uri");
     $json = json_decode($response->raw_body, true);
     $result = "「Quotes」";
-    $result .= "Status : Success!!!";
+    $result .= "\nStatus : ";
+    $result .= $json['status'];
     $result .= "\nQuotes : ";
     $result .= $json['result']['quotes'];
     $result .= "\nBy : ";
@@ -134,10 +137,25 @@ function arti($keyword) {
     $response = Unirest\Request::get("$uri");
     $json = json_decode($response->raw_body, true);
     $result = "「Arti Nama」";
-    $result .= "\nStatus : Success!!!";
+    $result .= "\nStatus : ";
+    $result .= $json['status'];
     $result .= "\nNama : " . $keyword . "-";
     $result .= "\nArti Nama : ";
     $result .= $json['result'];
+    $result .= "\n「Done~」";
+    return $result;
+}
+function wiki($keyword) {
+    $uri = "https://rest.farzain.com/api/wikipedia.php?id=" . $keyword . "&apikey=fDh6y7ZwXJ24eiArhGEJ55HgA";
+    $response = Unirest\Request::get("$uri");
+    $json = json_decode($response->raw_body, true);
+    $result = "「Wikipedia」";
+    $result .= "\nStatus : ";
+    $result .= $json['status'];
+    $result .= "\nTitle : ";
+    $result .= $json['title'];
+    $result .= "\n\nDescription : ";
+    $result .= $json['description'];
     $result .= "\n「Done~」";
     return $result;
 }
@@ -470,81 +488,7 @@ if($message['type']=='text') {
     }
 }
 #-------------------------[Open]-------------------------#
-#-------------------------[Open]-------------------------#
-if($message['type']=='text') {
-        if ($command == '/test123') {
-
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array (
-                  'type' => 'bubble',
-                  'styles' => 
-                  array (
-                    'footer' => 
-                    array (
-                      'separator' => true,
-                    ),
-                  ),
-                  'body' => 
-                  array (
-                    'type' => 'box',
-                    'layout' => 'vertical',
-                    'contents' => 
-                    array (
-                      0 => 
-                      array (
-                        'type' => 'text',
-                        'text' => 'Arti Nama',
-                        'weight' => 'bold',
-                        'size' => 'xxl',
-                        'margin' => 'md',
-                      ),
-                      1 => 
-                      array (
-                        'type' => 'text',
-                        'text' => 'Test',
-                        'size' => 'xs',
-                        'color' => '#aaaaaa',
-                        'wrap' => true,
-                      ),
-                      2 => 
-                      array (
-                        'type' => 'separator',
-                        'margin' => 'xxl',
-                      ),
-                      3 => 
-                      array (
-                        'type' => 'box',
-                        'layout' => 'horizontal',
-                        'margin' => 'md',
-                        'contents' => 
-                        array (
-                          0 => 
-                          array (
-                            'type' => 'text',
-                            'text' => 'RpdBot',
-                            'size' => 'xs',
-                            'color' => '#aaaaaa',
-                            'flex' => 0,
-                          ),
-                          1 => 
-                          array (
-                            'type' => 'text',
-                            'text' => '#2018',
-                            'color' => '#aaaaaa',
-                            'size' => 'xs',
-                            'align' => 'end',
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                )
-            )
-        );
-    }
-}   
+#-------------------------[Open]-------------------------#  
 if($message['type']=='text') {
     if ($command == '/instagram') { 
         
@@ -783,6 +727,54 @@ if($message['type']=='text') {
                 array(
                     'type' => 'text',
                     'text' => $result
+                )
+            )
+        );
+    }
+}
+if($message['type']=='text') {
+        if ($command == '/wikipedia') {
+
+        $result = wiki($options);
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'text',
+                    'text' => $result
+                )
+            )
+        );
+    }
+}
+if($message['type']=='text') {
+        if ($command == '/test1') {
+
+        $result = shalat($options);
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array (
+                  'type' => 'flex',
+                  'altText' => 'this is a flex message',
+                  'contents' => 
+                  array (
+                    'type' => 'bubble',
+                    'body' => 
+                    array (
+                      'type' => 'box',
+                      'layout' => 'vertical',
+                      'contents' => 
+                      array (,
+                        1 => 
+                        array (
+                          'type' => 'text',
+                          'text' => $result,
+                          'wrap' => True,
+                        ),
+                      ),
+                    ),
+                  ),
                 )
             )
         );
