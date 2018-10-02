@@ -89,10 +89,13 @@ function ahli($keyword) {
     $response = Unirest\Request::get("$uri");
   
     $json = json_decode($response->raw_body, true);
-    $parsed = array();
-    $parsed['a1'] = $json['result']['result'];
-    $parsed['a2'] = $json['result']['image'];
-    $parsed['a3'] = "Nama :" . $keyword . "-";
+    $result = "「Ahli」";
+    $result .= "\nStatus : ";
+    $result .= $json['status'];
+    $result .= "\nNama : " . $keyword;
+    $result .= "\nResult : ";
+    $result .= $json['result']['result'];
+    $result .= "\n「Done~」";
     return $parsed;
 }
 #-------------------------[Open]-------------------------#
@@ -640,29 +643,28 @@ if($message['type']=='text') {
         $balas = array( 
             'replyToken' => $replyToken, 
             'messages' => array( 
-                array ( 
-                        'type' => 'template', 
-                          'altText' => 'Kamu Ahli apa?', 
-                          'template' =>  
-                          array ( 
-                            'type' => 'buttons', 
-                            'thumbnailImageUrl' => $result['a2'], 
-                            'imageAspectRatio' => 'rectangle', 
-                            'imageSize' => 'cover', 
-                            'imageBackgroundColor' => '#FFFFFF', 
-                            'title' => $reult['a3'], 
-                            'text' => $reult['a1'], 
-                            'actions' =>  
-                            array ( 
-                              0 =>  
-                              array ( 
-                                'type' => 'message', 
-                                'label' => 'Done', 
-                                'text' => 'Terimakasih RpdBot', 
-                              ), 
-                            ), 
-                          ), 
-                        ) 
+                array (
+  'type' => 'flex',
+  'altText' => 'this is a flex message',
+  'contents' => 
+  array (
+    'type' => 'bubble',
+    'body' => 
+    array (
+      'type' => 'box',
+      'layout' => 'vertical',
+      'contents' => 
+      array (
+        0 => 
+        array (
+          'type' => 'text',
+          'text' => $result,
+          'wrap' => True,
+        ),
+      ),
+    ),
+  ),
+)
             ) 
         ); 
     }
