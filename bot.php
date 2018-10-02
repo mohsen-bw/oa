@@ -766,11 +766,11 @@ if($message['type']=='text') {
                       'layout' => 'vertical',
                       'contents' => 
                       array (,
-                        1 => 
+                        0 => 
                         array (
                           'type' => 'text',
                           'text' => $result,
-                          'wrap' => 'true',
+                          'wrap' => True,
                         ),
                       ),
                     ),
