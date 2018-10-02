@@ -770,7 +770,7 @@ if($message['type']=='text') {
                         array (
                           'type' => 'text',
                           'text' => $result,
-                          'wrap' => True,
+                          'wrap' => 'true',
                         ),
                       ),
                     ),
