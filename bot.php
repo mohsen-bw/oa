@@ -965,7 +965,7 @@ if($message['type']=='text') {
                           ),
                           3 => 
                           array (
-                            'imageUrl' => 'https://s.blanja.com/picspace/534/104982/600.600_1f396747d201443389a59a52b813a53c.jpg_348x348.jpg',
+                            'imageUrl' => 'https://bestanimations.com/HomeOffice/Clocks/clock-animated-gif-5.gif',
                             'action' => 
                             array (
                               'type' => 'message',
@@ -985,7 +985,7 @@ if($message['type']=='text') {
                           ),
                           5 => 
                           array (
-                            'imageUrl' => 'https://bpptik.kominfo.go.id/wp-content/uploads/2016/09/Programmer.jpg',
+                            'imageUrl' => 'https://2.bp.blogspot.com/-rj1nxBPkzT0/UEJCW4qHsGI/AAAAAAAAAu0/6xKNlKRHi9U/s1600/perahi+kertas.jpg',
                             'action' => 
                             array (
                               'type' => 'message',
@@ -995,7 +995,7 @@ if($message['type']=='text') {
                           ),
                           6 => 
                           array (
-                            'imageUrl' => 'https://bpptik.kominfo.go.id/wp-content/uploads/2016/09/Programmer.jpg',
+                            'imageUrl' => 'https://www.dailygizmo.tv/wp-content/uploads/2016/04/Joox-Logo-1440x937.jpg',
                             'action' => 
                             array (
                               'type' => 'message',
@@ -1005,7 +1005,7 @@ if($message['type']=='text') {
                           ),
                           7 => 
                           array (
-                            'imageUrl' => 'https://bpptik.kominfo.go.id/wp-content/uploads/2016/09/Programmer.jpg',
+                            'imageUrl' => 'https://www.kiblat.net/files/2018/02/shalat.jpg',
                             'action' => 
                             array (
                               'type' => 'message',
@@ -1015,7 +1015,7 @@ if($message['type']=='text') {
                           ),
                           8 => 
                           array (
-                            'imageUrl' => 'https://bpptik.kominfo.go.id/wp-content/uploads/2016/09/Programmer.jpg',
+                            'imageUrl' => 'https://us.123rf.com/450wm/nulinukas/nulinukas1202/nulinukas120200019/12251019-boy-watching-tv-cartoon.jpg?ver=6',
                             'action' => 
                             array (
                               'type' => 'message',
