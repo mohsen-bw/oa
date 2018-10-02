@@ -765,12 +765,12 @@ if($message['type']=='text') {
                       'type' => 'box',
                       'layout' => 'vertical',
                       'contents' => 
-                      array (,
+                      array (
                         0 => 
                         array (
                           'type' => 'text',
                           'text' => $result,
-                          'wrap' => 'true',
+                          'wrap' => True,
                         ),
                       ),
                     ),
@@ -831,89 +831,9 @@ if($message['type']=='text') {
         );
     }
 }
-if($message['type']=='text') {
-        if ($command == '/textx') {
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array (
-                      'type' => 'template',
-                      'altText' => 'this is a image carousel template',
-                      'template' => 
-                      array (
-                        'type' => 'image_carousel',
-                        'columns' => 
-                        array (
-                          0 => 
-                          array (
-                            'imageUrl' => 'https://is5-ssl.mzstatic.com/image/thumb/Purple118/v4/64/c9/6f/64c96f0c-0202-09f6-78b5-1ef915086215/Prod-1x_U007emarketing-85-220-0-5.png/246x0w.jpg',
-                            'action' => 
-                            array (
-                              'type' => 'message',
-                              'label' => 'Instagram',
-                              'text' => '/instagram [unsername]',
-                            ),
-                          ),
-                          1 => 
-                          array (
-                            'imageUrl' => 'https://rest.farzain.com/api/photofunia/neon_sign.php?text=RpdBot&apikey=fDh6y7ZwXJ24eiArhGEJ55HgA',
-                            'action' => 
-                            array (
-                              'type' => 'message',
-                              'label' => 'Neon Text',
-                              'text' => '/neon [text]',
-                            ),
-                          ),
-                          2 => 
-                          array (
-                            'imageUrl' => 'https://pbs.twimg.com/profile_images/907880885848088578/maJDkfTn_400x400.jpg',
-                            'action' => 
-                            array (
-                              'type' => 'message',
-                              'label' => 'TTS',
-                              'text' => '/say [text]',
-                            ),
-                          ),
-                          3 => 
-                          array (
-                            'imageUrl' => 'https://s.blanja.com/picspace/534/104982/600.600_1f396747d201443389a59a52b813a53c.jpg_348x348.jpg',
-                            'action' => 
-                            array (
-                              'type' => 'message',
-                              'label' => 'Jam Indonesia',
-                              'text' => '/jam',
-                            ),
-                          ),
-                          4 => 
-                          array (
-                            'imageUrl' => 'https://bpptik.kominfo.go.id/wp-content/uploads/2016/09/Programmer.jpg',
-                            'action' => 
-                            array (
-                              'type' => 'message',
-                              'label' => 'Creator',
-                              'text' => '/creator',
-                            ),
-                          ),
-                          5 => 
-                          array (
-                            'imageUrl' => 'https://pa1.narvii.com/6342/76ec050c2d184bbe728f7cedd48aadc29250b325_hq.gif',
-                            'action' => 
-                            array (
-                              'type' => 'message',
-                              'label' => 'More Menu',
-                              'text' => '/menu',
-                            ),
-                          ),
-                        ),
-                      ),
-                    )
-            )
-        );
-    }
-}
 #----------------------------------#
 if($message['type']=='text') {
-        if ($command == 'Help' || $command == 'Help') {
+        if ($command == 'Help' || $command == 'help') {
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
