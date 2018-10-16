@@ -1,8 +1,8 @@
 <?php
 require_once('./line_class.php');
 require_once('./unirest-php-master/src/Unirest.php');
-$channelAccessToken = 'nBOZlu9u30ITxAt1tZXkbvAHsgb2/EIHhBo8mwuzg/dqIAhJNjqW/A97MBf2lX2B+5L7NicAQYMLSJh6vw/MZ6Gpsbbj1am/jIHH18e9azTknd/6Jxi2qFEMMFlmrrjHixXEE4hQKCkJw/DbNW7z9gdB04t89/1O/w1cDnyilFU='; //sesuaikan 
-$channelSecret = '7bc5b547eb74a52213c4e88af08da151';//sesuaikan
+$channelAccessToken = 'YrgnN4khlxA7rZAXGOvxrzBPmnM+o6GcTokd7uoulU53wPH9LBa9Fwb4SVEcl9m0aqQ7WJdbF3SC1o4C7Bhig20trqkZNIwlx1AtaKpNOBQjF5bPMNRzWCutNoAmHRqUVujMfWbrOGsZkVxrePzr9QdB04t89/1O/w1cDnyilFU='; //sesuaikan 
+$channelSecret = '2f7da54862ef576d1a568fa342a19b91';//sesuaikan
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 $userId     = $client->parseEvents()[0]['source']['userId'];
 $groupId    = $client->parseEvents()[0]['source']['groupId'];
@@ -109,41 +109,6 @@ function neon($keyword) {
     return $result; 
 }
 #-------------------------[Close]-------------------------#
-function connect($end_point, $post) {
-	$_post = array();
-	if (is_array($post)) {
-		foreach ($post as $name => $value) {
-			$_post[] = $name.'='.urlencode($value);
-		}
-	}
-	$ch = curl_init($end_point);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt($ch, CURLOPT_POST, 1);
-	curl_setopt($ch, CURLOPT_HEADER, 0);
-	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-	if (is_array($post)) {
-		curl_setopt($ch, CURLOPT_POSTFIELDS, join('&', $_post));
-	}
-	curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)');
-	$result = curl_exec($ch);
-	if (curl_errno($ch) != 0 && empty($result)) {
-		$result = false;
-	}
-	curl_close($ch);
-	return $result;
-}
-function like($keyword) { 
-$api_url = 'https://wstore.co.id/api/json.php'; // api url
-$post_data = array(
-	'api_key' => 'y4YVPe8RS2LA9p3cidhOqDjbkJsW6K', // api key Anda
-	'action' => 'order',
-	'service' => 888, // id layanan
-	'data' => $keyword,
-	'quantity' => 50, // kosongkan jika order komentar
-);
-$api = json_decode(connect($api_url, $post_data));
-print_r($api);
-}
 #-------------------------[Open]-------------------------#
 function light($keyword) { 
     $uri = "https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20171227T171852Z.fda4bd604c7bf41f.f939237fb5f802608e9fdae4c11d9dbdda94a0b5&text=" . $keyword . "&lang=id-id"; 
@@ -422,7 +387,7 @@ function qibla($keyword) {
 }
 //show menu, saat join dan command,menu
 if ($command == '/menu') {
-    $text .= "「Keyword RpdBot~」\n\n";
+    $text .= "「Keyword GabzBot~」\n\n";
     $text .= "- Help\n";
     $text .= "- /jam \n";
     $text .= "- /quotes \n";
@@ -445,7 +410,6 @@ if ($command == '/menu') {
     $text .= "- /zodiak [tanggal lahir] \n";
         $text .= "- /instagram [unsername] \n";
         $text .= "- /jadwaltv [stasiun] \n";
-	$text .= "- /like [url] \n";
     $text .= "- /creator \n";
     $text .= "\n「Done~」";
     $balas = array(
@@ -1332,20 +1296,6 @@ if($message['type']=='text') {
                 array( 
                     'type' => 'text',
                     'text' => $result
-                )
-            )
-        );
-    }
-}
-if($message['type']=='text') {
-        if ($command == '/like') {
-        $result = like($options);
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array( 
-                    'type' => 'text',
-                    'text' => 'Successs, please wait a few minute, Regards : Rpd'
                 )
             )
         );
