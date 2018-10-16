@@ -465,7 +465,7 @@ if($message['type']=='text') {
 #-------------------------[Close]-------------------------#
 if($message['type']=='text') {
  if ($command == 'brainly') {
-  $uri = "https://rest.farzain.com/api/brainly.php?id=". $options ."&apikey=1MJ11rZNOM4XbZn8U0PTIsAJh";
+  $uri = "https://rest.farzain.com/api/brainly.php?id=". $options ."&apikey=ppqeuy";
   $response = Unirest\Request::get("$uri");
         $json = json_decode($response->raw_body, true);
         $responses['replyToken'] = $replyToken;
