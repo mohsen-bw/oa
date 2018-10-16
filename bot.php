@@ -269,6 +269,45 @@ function film_syn($keyword) {
 }
 #-------------------------[Close]-------------------------#
 #-------------------------[Open]-------------------------#
+function youtube($keyword) {
+    $uri = "https://www.googleapis.com/youtube/v3/search?part=snippet&order=relevance&regionCode=lk&q=" . $keyword . "&key=AIzaSyB5cpL7DYDn_2c7QuExnGOZ1Wmg4AQmx8c&maxResults=10&type=video";
+	
+    $response = Unirest\Request::get("$uri");
+    $json = json_decode($response->raw_body, true);
+    $parsed = array();
+    $parsed['a1'] = $json['items']['0']['id']['videoId'];
+	$parsed['b1'] = $json['items']['0']['snippet']['title'];
+	$parsed['c1'] = $json['items']['0']['snippet']['thumbnails']['high']['url'];
+    $parsed['a2'] = $json['items']['1']['id']['videoId'];
+	$parsed['b2'] = $json['items']['1']['snippet']['title'];
+	$parsed['c2'] = $json['items']['1']['snippet']['thumbnails']['high']['url'];
+    $parsed['a3'] = $json['items']['2']['id']['videoId'];
+	$parsed['b3'] = $json['items']['2']['snippet']['title'];
+	$parsed['c3'] = $json['items']['2']['snippet']['thumbnails']['high']['url'];
+    $parsed['a4'] = $json['items']['3']['id']['videoId'];
+	$parsed['b4'] = $json['items']['3']['snippet']['title'];
+	$parsed['c4'] = $json['items']['3']['snippet']['thumbnails']['high']['url'];
+    $parsed['a5'] = $json['items']['4']['id']['videoId'];
+	$parsed['b5'] = $json['items']['4']['snippet']['title'];
+	$parsed['c5'] = $json['items']['4']['snippet']['thumbnails']['high']['url'];
+    $parsed['a6'] = $json['items']['5']['id']['videoId'];
+	$parsed['b6'] = $json['items']['5']['snippet']['title'];
+	$parsed['c6'] = $json['items']['5']['snippet']['thumbnails']['high']['url'];
+    $parsed['a7'] = $json['items']['6']['id']['videoId'];
+	$parsed['b7'] = $json['items']['6']['snippet']['title'];	
+	$parsed['c7'] = $json['items']['6']['snippet']['thumbnails']['high']['url'];
+    $parsed['a8'] = $json['items']['7']['id']['videoId'];
+	$parsed['b8'] = $json['items']['7']['snippet']['title'];
+	$parsed['c8'] = $json['items']['7']['snippet']['thumbnails']['high']['url'];
+    $parsed['a9'] = $json['items']['8']['id']['videoId'];
+	$parsed['b9'] = $json['items']['8']['snippet']['title'];
+	$parsed['c9'] = $json['items']['8']['snippet']['thumbnails']['high']['url'];
+    $parsed['a10'] = $json['items']['9']['id']['videoId'];
+	$parsed['b10'] = $json['items']['9']['snippet']['title'];	
+	$parsed['c10'] = $json['items']['9']['snippet']['thumbnails']['high']['url'];
+    return $parsed;
+}
+#-------------------------[Open]-------------------------#
 function film($keyword) {
     $uri = "http://www.omdbapi.com/?t=" . $keyword . '&plot=full&apikey=d5010ffe';
 
@@ -366,6 +405,8 @@ if ($command == '/menu') {
     $text .= "- /film-syn [Judul] \n";
     $text .= "- /lirik [Judul] \n";
     $text .= "- /wikipedia [Judul] \n";
+	$text .= "- /brainly [pertanyaan] \n";
+	$text .= "- /youtube [Judul] \n";
     $text .= "- /zodiak [tanggal lahir] \n";
         $text .= "- /instagram [unsername] \n";
         $text .= "- /jadwaltv [stasiun] \n";
@@ -429,6 +470,149 @@ if ($type == 'join') {
         )
     );
 }
+if($message['type']=='text') {
+	    if ($command == '/youtube') {
+        $result = youtube($options);
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+				array (
+				  'type' => 'template',
+				  'altText' => 'GabzBot',
+				  'template' => 
+				  array (
+				    'type' => 'carousel',
+				    'columns' => 
+				    array (
+				      0 => 
+				      array (
+				        'thumbnailImageUrl' => $result['c1'],
+				        'imageBackgroundColor' => '#FFFFFF',
+				        'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b1'], 0, 47)).'...',
+				        'actions' => 
+				        array (
+				          0 => 
+				          array (
+				            'type' => 'uri',
+				            'label' => 'Youtube',
+				            'uri' => 'https://youtu.be/'.$result['a1'],
+				          ),
+				        ),
+				      ),
+				      1 => 
+				      array (
+				        'thumbnailImageUrl' => $result['c2'],
+				        'imageBackgroundColor' => '#000000',
+				        'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b2'], 0, 47)).'...',
+				        'actions' => 
+				        array (
+				          0 => 
+				          array (
+				            'type' => 'uri',
+				            'label' => 'Youtube',
+				            'uri' => 'https://youtu.be/'.$result['a2'],
+				          ),
+				        ),
+				      ),	
+				      2 => 
+				      array (
+				        'thumbnailImageUrl' => $result['c3'],
+				        'imageBackgroundColor' => '#FFFFFF',
+				        'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b3'], 0, 47)).'...',
+				        'actions' => 
+				        array (
+				          0 => 
+				          array (
+				            'type' => 'uri',
+				            'label' => 'Youtube',
+				            'uri' => 'https://youtu.be/'.$result['a3'],
+				          ),
+				        ),
+				      ),					  
+				      3 => 
+				      array (
+				        'thumbnailImageUrl' => $result['c4'],
+				        'imageBackgroundColor' => '#FFFFFF',
+				        'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b4'], 0, 47)).'...',
+				        'actions' => 
+				        array (
+				          0 => 
+				          array (
+				            'type' => 'uri',
+				            'label' => 'Youtube',
+				            'uri' => 'https://youtu.be/'.$result['a4'],
+				          ),
+				        ),
+				      ),
+				      4 => 
+				      array (
+				        'thumbnailImageUrl' => $result['c5'],
+				        'imageBackgroundColor' => '#FFFFFF',
+				        'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b5'], 0, 47)).'...',
+				        'actions' => 
+				        array (
+				          0 => 
+				          array (
+				            'type' => 'uri',
+				            'label' => 'Youtube',
+				            'uri' => 'https://youtu.be/'.$result['a5'],
+				          ),
+				        ),
+				      ),
+				      5 => 
+				      array (
+				        'thumbnailImageUrl' => $result['c6'],
+				        'imageBackgroundColor' => '#FFFFFF',
+				        'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b6'], 0, 47)).'...',
+				        'actions' => 
+				        array (
+				          0 => 
+				          array (
+				            'type' => 'uri',
+				            'label' => 'Youtube',
+				            'uri' => 'https://youtu.be/'.$result['a6'],
+				          ),
+				        ),
+				      ),					  
+				      6 => 
+				      array (
+				        'thumbnailImageUrl' => $result['c7'],
+				        'imageBackgroundColor' => '#FFFFFF',
+				        'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b7'], 0, 47)).'...',
+				        'actions' => 
+				        array (
+				          0 => 
+				          array (
+				            'type' => 'uri',
+				            'label' => 'Youtube',
+				            'uri' => 'https://youtu.be/'.$result['a7'],
+				          ),
+				        ),
+				      ),					  
+				      7 => 
+				      array (
+				        'thumbnailImageUrl' => $result['c8'],
+				        'imageBackgroundColor' => '#FFFFFF',
+				        'text' => preg_replace('/[^a-z0-9_ ]/i', '', substr($result['b8'], 0, 47)).'...',
+				        'actions' => 
+				        array (
+				          0 => 
+				          array (
+				            'type' => 'uri',
+				            'label' => 'Youtube',
+				            'uri' => 'https://youtu.be/'.$result['a8'],
+				          ),
+				        ),
+				      ),					  
+				    ),
+				    'imageAspectRatio' => 'rectangle',
+				    'imageSize' => 'cover',
+				  ),
+				)		
+            )
+        );
+}
+}
 #-------------------------[Open]-------------------------#
 if($message['type']=='text') {
         if ($command == '/quotes') {
@@ -464,7 +648,7 @@ if($message['type']=='text') {
 }   
 #-------------------------[Close]-------------------------#
 if($message['type']=='text') {
- if ($command == 'brainly') {
+ if ($command == '/brainly') {
   $uri = "https://rest.farzain.com/api/brainly.php?id=". $options ."&apikey=ppqeuy";
   $response = Unirest\Request::get("$uri");
         $json = json_decode($response->raw_body, true);
