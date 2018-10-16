@@ -240,6 +240,21 @@ function zodiak($keyword) {
 }
 #-------------------------[Close]-------------------------#
 #-------------------------[Open]-------------------------#
+function br($keyword) {
+    $uri = "https://rest.farzain.com/api/brainly.php?id=" .$keyword. "&apikey=fDh6y7ZwXJ24eiArhGEJ55HgA";
+
+    $response = Unirest\Request::get("$uri");
+
+    $json = json_decode($response->raw_body, true);
+    $result = array();
+    $result = "「Informasi Brainly";
+    $result .= "\nJudul :";
+    $result .= $json['0'][title];
+    $result .= "\nLink : ";
+    $result .= $json['0'][url];
+    $result .= "\n「Done~」";
+    return $result;
+}
 function film_syn($keyword) {
     $uri = "http://www.omdbapi.com/?t=" . $keyword . '&plot=full&apikey=d5010ffe';
 
@@ -499,6 +514,20 @@ if($message['type']=='text') {
  }
 }
 #-------------------------[Open]-------------------------#
+if($message['type']=='text') {
+	    if ($command == '/br') {
+        $result = br($options);
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'text',
+                    'text' => $result
+                )
+            )
+        );
+    }
+}
 if($message['type']=='text') {
 if ($command == '/jam') { 
      
