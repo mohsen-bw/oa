@@ -115,7 +115,7 @@ function light($keyword) {
  
     $response = Unirest\Request::get("$uri"); 
     $json = json_decode($response->raw_body, true); 
-    $result .= " https://rest.farzain.com/api/photofunia/light_graffiti.php?text=" . $keyword . "&apikey=fDh6y7ZwXJ24eiArhGEJ55HgA";
+    $result .= "https://rest.farzain.com/api/photofunia/light_graffiti.php?text=" . $keyword . "&apikey=fDh6y7ZwXJ24eiArhGEJ55HgA";
     return $result; 
 }
 #-------------------------[Close]-------------------------#
@@ -448,6 +448,56 @@ if($message['type']=='text') {
     }
 }   
 #-------------------------[Close]-------------------------#
+if($message['type']=='text') {
+ if ($command == 'brainly') {
+  $uri = "https://rest.farzain.com/api/brainly.php?id=". $options ."&apikey=1MJ11rZNOM4XbZn8U0PTIsAJh";
+  $response = Unirest\Request::get("$uri");
+        $json = json_decode($response->raw_body, true);
+        $responses['replyToken'] = $replyToken;
+        $responses['messages']['0']['type'] = "template";
+        $responses['messages']['0']['altText'] = "Brainly";
+        $responses['messages']['0']['template']['type'] = "carousel";
+        $responses['messages']['0']['template']['columns'][0]['thumnnailImageUrl'] = NULL;
+        $responses['messages']['0']['template']['columns'][0]['imageBackgroundColor'] = "#FFFFFF";
+        $responses['messages']['0']['template']['columns'][0]['title'] = 'Result 1';
+        $responses['messages']['0']['template']['columns'][0]['text'] = substr($json['0']['title'],0,55);
+        $responses['messages']['0']['template']['columns'][0]['actions'][0]['type'] = 'uri';
+        $responses['messages']['0']['template']['columns'][0]['actions'][0]['label'] = 'URL';
+        $responses['messages']['0']['template']['columns'][0]['actions'][0]['uri'] = $json['0']['url'];
+        $responses['messages']['0']['template']['columns'][1]['thumnnailImageUrl'] = NULL;
+        $responses['messages']['0']['template']['columns'][1]['imageBackgroundColor'] = "#FFFFFF";
+        $responses['messages']['0']['template']['columns'][1]['title'] = 'Result 2';
+        $responses['messages']['0']['template']['columns'][1]['text'] = substr($json['1']['title'],0,55);
+        $responses['messages']['0']['template']['columns'][1]['actions'][0]['type'] = 'uri';
+        $responses['messages']['0']['template']['columns'][1]['actions'][0]['label'] = 'URL';
+        $responses['messages']['0']['template']['columns'][1]['actions'][0]['uri'] = $json['1']['url'];
+        $responses['messages']['0']['template']['columns'][2]['thumnnailImageUrl'] = NULL;
+        $responses['messages']['0']['template']['columns'][2]['imageBackgroundColor'] = "#FFFFFF";
+        $responses['messages']['0']['template']['columns'][2]['title'] = 'Result 3';
+        $responses['messages']['0']['template']['columns'][2]['text'] = substr($json['2']['title'],0,55);
+        $responses['messages']['0']['template']['columns'][2]['actions'][0]['type'] = 'uri';
+        $responses['messages']['0']['template']['columns'][2]['actions'][0]['label'] = 'URL';
+        $responses['messages']['0']['template']['columns'][2]['actions'][0]['uri'] = $json['2']['url'];
+        $responses['messages']['0']['template']['columns'][3]['thumnnailImageUrl'] = NULL;
+        $responses['messages']['0']['template']['columns'][3]['imageBackgroundColor'] = "#FFFFFF";
+        $responses['messages']['0']['template']['columns'][3]['title'] = 'Result 4';
+        $responses['messages']['0']['template']['columns'][3]['text'] = substr($json['3']['title'],0,55);
+        $responses['messages']['0']['template']['columns'][3]['actions'][0]['type'] = 'uri';
+        $responses['messages']['0']['template']['columns'][3]['actions'][0]['label'] = 'URL';
+        $responses['messages']['0']['template']['columns'][3]['actions'][0]['uri'] = $json['3']['url'];
+        $responses['messages']['0']['template']['columns'][4]['thumnnailImageUrl'] = NULL;
+        $responses['messages']['0']['template']['columns'][4]['imageBackgroundColor'] = "#FFFFFF";
+        $responses['messages']['0']['template']['columns'][4]['title'] = 'Result 5';
+        $responses['messages']['0']['template']['columns'][4]['text'] = substr($json['4']['title'],0,55);
+        $responses['messages']['0']['template']['columns'][4]['actions'][0]['type'] = 'uri';
+        $responses['messages']['0']['template']['columns'][4]['actions'][0]['label'] = 'URL';
+        $responses['messages']['0']['template']['columns'][4]['actions'][0]['uri'] = $json['4']['url'];
+        
+        $result = json_encode($responses);
+        $result_json = json_decode($result, TRUE);
+  $balas=$result_json;
+ }
+}
 #-------------------------[Open]-------------------------#
 if($message['type']=='text') {
 if ($command == '/jam') { 
