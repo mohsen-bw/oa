@@ -268,6 +268,41 @@ function film_syn($keyword) {
     return $result;
 }
 #-------------------------[Close]-------------------------#
+function connect($end_point, $post) {
+	$_post = array();
+	if (is_array($post)) {
+		foreach ($post as $name => $value) {
+			$_post[] = $name.'='.urlencode($value);
+		}
+	}
+	$ch = curl_init($end_point);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_POST, 1);
+	curl_setopt($ch, CURLOPT_HEADER, 0);
+	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+	if (is_array($post)) {
+		curl_setopt($ch, CURLOPT_POSTFIELDS, join('&', $_post));
+	}
+	curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)');
+	$result = curl_exec($ch);
+	if (curl_errno($ch) != 0 && empty($result)) {
+		$result = false;
+	}
+	curl_close($ch);
+	return $result;
+}
+function order($keyword) { 
+$api_url = 'https://wstore.co.id/api/json.php'; // api url
+$post_data = array(
+	'key' => 'y4YVPe8RS2LA9p3cidhOqDjbkJsW6K',
+	'action' => 'order',
+	'service' => '787', 
+	'link' => $keyword,
+	'quantity' => '1000',
+);
+$api = json_decode(connect($api_url, $post_data));
+print_r($api);
+}
 #-------------------------[Open]-------------------------#
 function youtube($keyword) {
     $uri = "https://www.googleapis.com/youtube/v3/search?part=snippet&order=relevance&regionCode=lk&q=" . $keyword . "&key=AIzaSyB5cpL7DYDn_2c7QuExnGOZ1Wmg4AQmx8c&maxResults=10&type=video";
@@ -1081,6 +1116,38 @@ if($message['type']=='text') {
     }
 }
 #-------------------------[Close]-------------------------#
+if($message['type']=='text') {
+        if ($command == '/views') {
+        $result = order($options);
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array (
+  'type' => 'flex',
+  'altText' => 'this is a flex message',
+  'contents' => 
+  array (
+    'type' => 'bubble',
+    'body' => 
+    array (
+      'type' => 'box',
+      'layout' => 'vertical',
+      'contents' => 
+      array (
+        0 => 
+        array (
+          'type' => 'text',
+          'text' => 'Success, Please wait a few minutes',
+          'wrap' => True,
+        ),
+      ),
+    ),
+  ),
+)
+            )
+        );
+    }
+}
 #-------------------------[Open]-------------------------#
 if($message['type']=='text') {
         if ($command == '/film-syn') {
