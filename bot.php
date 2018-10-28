@@ -1115,39 +1115,6 @@ if($message['type']=='text') {
         ); 
     }
 }
-#-------------------------[Close]-------------------------#
-if($message['type']=='text') {
-        if ($command == '/views') {
-        $result = order($options);
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array (
-  'type' => 'flex',
-  'altText' => 'this is a flex message',
-  'contents' => 
-  array (
-    'type' => 'bubble',
-    'body' => 
-    array (
-      'type' => 'box',
-      'layout' => 'vertical',
-      'contents' => 
-      array (
-        0 => 
-        array (
-          'type' => 'text',
-          'text' => 'Success, Please wait a few minutes',
-          'wrap' => True,
-        ),
-      ),
-    ),
-  ),
-)
-            )
-        );
-    }
-}
 #-------------------------[Open]-------------------------#
 if($message['type']=='text') {
         if ($command == '/film-syn') {
