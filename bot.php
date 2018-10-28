@@ -54,7 +54,7 @@ function lirik($keyword) {
     $result .= "\n「Done~」";
     return $result;
 }
-function imgj($keyword) {
+function img($keyword) {
     $uri = "https://rest.farzain.com/api/joox.php?id=" . $keyword . "&apikey=fDh6y7ZwXJ24eiArhGEJ55HgA";
     $response = Unirest\Request::get("$uri");
     $json = json_decode($response->raw_body, true);
