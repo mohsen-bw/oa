@@ -513,7 +513,7 @@ if($message['type']=='text') {
             'messages' => array(
         array (
           'type' => 'template',
-          'altText' => 'GabzBot',
+          'altText' => '[┄┅═☆ᖼOᗱᗴℕ☆═┅┄]',
           'template' => 
           array (
             'type' => 'carousel',
@@ -838,7 +838,7 @@ if ($command == '/jam') {
 }
 }
 if($message['type']=='text') {
-        if ($command == '/jadwaltv') {
+        if ($command == '/tv') {
         $result = tv($options);
         $balas = array(
             'replyToken' => $replyToken,
@@ -1090,7 +1090,7 @@ if($message['type']=='text') {
             'messages' => array( 
                 array ( 
                         'type' => 'template', 
-                          'altText' => 'About Creator RpdBot', 
+                          'altText' => 'About Creator mBot', 
                           'template' =>  
                           array ( 
                             'type' => 'buttons', 
@@ -1106,7 +1106,7 @@ if($message['type']=='text') {
                               array ( 
                                 'type' => 'uri', 
                                 'label' => 'Contact', 
-                                'uri' => 'https://line.me/ti/p/~@ntq3882j', 
+                                'uri' => 'https://line.me/ti/p/~m_bw', 
                               ), 
                             ), 
                           ), 
@@ -1501,7 +1501,7 @@ if($message['type']=='text') {
             'messages' => array( 
                 array ( 
                         'type' => 'template', 
-                          'altText' => 'Neon teks', 
+                          'altText' => '[┄┅═☆ᖼOᗱᗴℕ☆═┅┄]', 
                           'template' =>  
                           array ( 
                             'type' => 'buttons', 
