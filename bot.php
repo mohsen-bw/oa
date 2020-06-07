@@ -1,8 +1,8 @@
 <?php
 require_once('./line_class.php');
 require_once('./unirest-php-master/src/Unirest.php');
-$channelAccessToken = 'nBOZlu9u30ITxAt1tZXkbvAHsgb2/EIHhBo8mwuzg/dqIAhJNjqW/A97MBf2lX2B+5L7NicAQYMLSJh6vw/MZ6Gpsbbj1am/jIHH18e9azTknd/6Jxi2qFEMMFlmrrjHixXEE4hQKCkJw/DbNW7z9gdB04t89/1O/w1cDnyilFU='; //sesuaikan 
-$channelSecret = '7bc5b547eb74a52213c4e88af08da151';//sesuaikan
+$channelAccessToken = 'Wa2jA4F8Bo37/s4Qfq75gf8YvDmD4ulBmPSp7HzOTHPHPcLBFhqf6ex9dq/1sEh9OxDYldg1cyc+rWtjU+34p+fDxEN6dFiW/gq6OSGj+6spkEOZpCAHsM96+2unWdJPslWE8YkWl3S0Rm3GmQYp01GUYhWQfeY8sLGRXgo3xvw='; //sesuaikan 
+$channelSecret = '0f3cde4cd3691acd977fc5d615edd134';//sesuaikan
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 $userId     = $client->parseEvents()[0]['source']['userId'];
 $groupId    = $client->parseEvents()[0]['source']['groupId'];
@@ -758,7 +758,7 @@ if ($command == '/jam') {
             'messages' => array( 
                 array ( 
                   'type' => 'template', 
-                  'altText' => 'Jam Indonesia', 
+                  'altText' => 'iran', 
                   'template' =>  
                   array ( 
                     'type' => 'carousel', 
@@ -769,7 +769,7 @@ if ($command == '/jam') {
                         'thumbnailImageUrl' => 'https://preview.ibb.co/gXGfLU/20180913_194713.jpg', 
                         'imageBackgroundColor' => '#FFFFFF', 
                         'title' => 'WIB', 
-                        'text' => 'Jam Indonesia WIB', 
+                        'text' => 'Jam iran WIB', 
                         'actions' =>  
                         array ( 
                           0 =>  
@@ -791,7 +791,7 @@ if ($command == '/jam') {
                         'thumbnailImageUrl' => 'https://preview.ibb.co/nxaPfU/20180913_194725.jpg', 
                         'imageBackgroundColor' => '#000000', 
                         'title' => 'WIT', 
-                        'text' => 'Jam Indonesia WIT', 
+                        'text' => 'Jam iran WIT', 
                         'actions' =>  
                         array ( 
                           0 =>  
@@ -813,7 +813,7 @@ if ($command == '/jam') {
                         'thumbnailImageUrl' => 'https://preview.ibb.co/cPdc0U/20180913_194744.jpg', 
                         'imageBackgroundColor' => '#000000', 
                         'title' => 'WITA', 
-                        'text' => 'Jam Indonesia WITA', 
+                        'text' => 'Jam iran WITA', 
                         'actions' =>  
                         array ( 
                           0 =>  
