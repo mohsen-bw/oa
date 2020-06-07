@@ -1094,7 +1094,7 @@ if($message['type']=='text') {
                           'template' =>  
                           array ( 
                             'type' => 'buttons', 
-                            'thumbnailImageUrl' => 'https://bpptik.kominfo.go.id/wp-content/uploads/2016/09/Programmer.jpg', 
+                            'thumbnailImageUrl' => 'https://lh3.googleusercontent.com/-EcyhY1gENdM/Xth9WMpmqMI/AAAAAAAAFI0/zkdCARVcIpgQSs8Etq34fQb7aBzr1lYCACK8BGAsYHg/s512/2020-06-03.png', 
                             'imageAspectRatio' => 'rectangle', 
                             'imageSize' => 'cover', 
                             'imageBackgroundColor' => '#FFFFFF', 
@@ -1371,7 +1371,7 @@ if($message['type']=='text') {
                           ),
                           2 => 
                           array (
-                            'imageUrl' => 'https://pbs.twimg.com/profile_images/907880885848088578/maJDkfTn_400x400.jpg',
+                            'imageUrl' => 'https://lh3.googleusercontent.com/-EcyhY1gENdM/Xth9WMpmqMI/AAAAAAAAFI0/zkdCARVcIpgQSs8Etq34fQb7aBzr1lYCACK8BGAsYHg/s512/2020-06-03.png',
                             'action' => 
                             array (
                               'type' => 'message',
@@ -1391,7 +1391,7 @@ if($message['type']=='text') {
                           ),
                           4 => 
                           array (
-                            'imageUrl' => 'https://bpptik.kominfo.go.id/wp-content/uploads/2016/09/Programmer.jpg',
+                            'imageUrl' => 'https://lh3.googleusercontent.com/-EcyhY1gENdM/Xth9WMpmqMI/AAAAAAAAFI0/zkdCARVcIpgQSs8Etq34fQb7aBzr1lYCACK8BGAsYHg/s512/2020-06-03.png',
                             'action' => 
                             array (
                               'type' => 'message',
@@ -1411,7 +1411,7 @@ if($message['type']=='text') {
                           ),
                           6 => 
                           array (
-                            'imageUrl' => 'https://www.dailygizmo.tv/wp-content/uploads/2016/04/Joox-Logo-1440x937.jpg',
+                            'imageUrl' => 'https://lh3.googleusercontent.com/-h9tABochSac/Xnfeb98sUJI/AAAAAAAADig/EgsqVVWeD0Mwy6xSrV0HpGz-OS019FxIACK8BGAsYHg/s324/2020-03-22.gif',
                             'action' => 
                             array (
                               'type' => 'message',
