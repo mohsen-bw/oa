@@ -2029,7 +2029,8 @@ if($message['type']=='text') {
 }
 //pesan bergambar
 if ($message['type'] == 'text') {
-        if ($command == 'image2':
+        if ($command == 'image2') {
+
         $line_server_url = 'https://api.line.me/v2/bot/message/reply';
         $response = array (
             "replyToken" => $sender_replyToken,
@@ -2045,7 +2046,8 @@ if ($message['type'] == 'text') {
 }
 //pesan bergambar
 if ($message['type'] == 'text') {
-        if ($command == 'image1':
+        if ($command == 'image1') {
+
         $line_server_url = 'https://api.line.me/v2/bot/message/reply';
         $response = array (
             "replyToken" => $sender_replyToken,
@@ -2061,7 +2063,8 @@ if ($message['type'] == 'text') {
 }
 //pesan bergambar
 if ($message['type'] == 'text') {
-        if ($command == 'image':
+        if ($command == 'image') {
+
         $line_server_url = 'https://api.line.me/v2/bot/message/reply';
         $response = array (
             "replyToken" => $sender_replyToken,
@@ -2077,7 +2080,8 @@ if ($message['type'] == 'text') {
 }
 //pesan bergambar
 if ($message['type'] == 'text') {
-        if ($command == 'sticker':
+        if ($command == 'sticker') {
+
         $line_server_url = 'https://api.line.me/v2/bot/message/reply';
         $response = array (
             "replyToken" => $sender_replyToken,
