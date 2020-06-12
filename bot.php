@@ -164,7 +164,7 @@ function wiki($keyword) {
 }
 #-------------------------[Open]-------------------------#
 function wib($keyword) {
-    $uri = "https://time.siswadi.com/timezone/?address=Jakarta";
+    $uri = "https://time.siswadi.com/timezone/?address=Tehran";
     $response = Unirest\Request::get("$uri");
     $json = json_decode($response->raw_body, true);
     $parsed = array(); 
@@ -422,7 +422,7 @@ function qibla($keyword) {
 }
 //show menu, saat join dan command,menu
 if ($command == '/menu') {
-    $text .= "「Keyword RpdBot~」\n\n";
+    $text .= "「Keyword ★ᖼᗱO꓅★~」\n\n";
     $text .= "- Help\n";
     $text .= "- /jam \n";
     $text .= "- /quotes \n";
@@ -452,7 +452,7 @@ if ($command == '/menu') {
         'messages' => array(
             array (
   'type' => 'flex',
-  'altText' => 'this is a flex message',
+  'altText' => '☻▬═★ᖼOᗱᗴℕ★═▬☻',
   'contents' => 
   array (
     'type' => 'bubble',
@@ -476,13 +476,13 @@ if ($command == '/menu') {
     );
 }
 if ($type == 'join') {
-    $text = "Terimakasih Telah invite aku ke group ini silahkan ketik Help untuk lihat command aku :)";
+    $text = "ســ͢͜͡✾ٜٜٜٜٜٜٖٖٖٖٜ̂̂̂̂̂̂͢͜͡✾ـلــام دوســ͢͜͡✾ٜٜٜٜٜٜٖٖٖٖٜ̂̂̂̂̂̂͢͜͡✾ـتــانــ      از ایــنــڪــه م͢͜͡ـ✾ٜٜٜٜٜٜٖٖٖٖٜ̂̂̂̂̂̂͢͜͡✾ــن را بــه گـ͢͜͡✾ٜٜٜٜٜٜٖٖٖٖٜ̂̂̂̂̂̂͢͜͡✾ـــروه خــودتـ͢͜͡✾ٜٜٜٜٜٜٖٖٖٖٜ̂̂̂̂̂̂͢͜͡✾ـون دعــوت ڪــردیـ͢͜͡✾ٜٜٜٜٜٜٖٖٖٖٜ̂̂̂̂̂̂͢͜͡✾ـــد     مــمــنــونـ͢͜͡✾ٜٜٜٜٜٜٖٖٖٖٜ̂̂̂̂̂̂͢͜͡✾ــمــ       امــیـ͢͜͡✾ٜٜٜٜٜٜٖٖٖٖٜ̂̂̂̂̂̂͢͜͡✾ـدوارم  لــحــظـ͢͜͡✾ٜٜٜٜٜٜٖٖٖٖٜ̂̂̂̂̂̂͢͜͡✾ــات خــوبــی را   در ڪــنــ͢͜͡✾ٜٜٜٜٜٜٖٖٖٖٜ̂̂̂̂̂̂͢͜͡✾ــار هم ســپــری ڪــنــیــم :)";
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
             array (
   'type' => 'flex',
-  'altText' => 'this is a flex message',
+  'altText' => '☻▬═★ᖼOᗱᗴℕ★═▬☻',
   'contents' => 
   array (
     'type' => 'bubble',
@@ -657,7 +657,7 @@ if($message['type']=='text') {
             'messages' => array(
                 array (
   'type' => 'flex',
-  'altText' => 'this is a flex message',
+  'altText' => '☻▬═★ᖼOᗱᗴℕ★═▬☻',
   'contents' => 
   array (
     'type' => 'bubble',
@@ -692,35 +692,35 @@ if($message['type']=='text') {
         $responses['messages']['0']['altText'] = "Brainly";
         $responses['messages']['0']['template']['type'] = "carousel";
         $responses['messages']['0']['template']['columns'][0]['thumnnailImageUrl'] = NULL;
-        $responses['messages']['0']['template']['columns'][0]['imageBackgroundColor'] = "#FFFFFF";
+        $responses['messages']['0']['template']['columns'][0]['imageBackgroundColor'] = "#FF00FF";
         $responses['messages']['0']['template']['columns'][0]['title'] = 'Result 1';
         $responses['messages']['0']['template']['columns'][0]['text'] = substr($json['0']['title'],0,55);
         $responses['messages']['0']['template']['columns'][0]['actions'][0]['type'] = 'uri';
         $responses['messages']['0']['template']['columns'][0]['actions'][0]['label'] = 'URL';
         $responses['messages']['0']['template']['columns'][0]['actions'][0]['uri'] = $json['0']['url'];
         $responses['messages']['0']['template']['columns'][1]['thumnnailImageUrl'] = NULL;
-        $responses['messages']['0']['template']['columns'][1]['imageBackgroundColor'] = "#FFFFFF";
+        $responses['messages']['0']['template']['columns'][1]['imageBackgroundColor'] = "#FF00FF";
         $responses['messages']['0']['template']['columns'][1]['title'] = 'Result 2';
         $responses['messages']['0']['template']['columns'][1]['text'] = substr($json['1']['title'],0,55);
         $responses['messages']['0']['template']['columns'][1]['actions'][0]['type'] = 'uri';
         $responses['messages']['0']['template']['columns'][1]['actions'][0]['label'] = 'URL';
         $responses['messages']['0']['template']['columns'][1]['actions'][0]['uri'] = $json['1']['url'];
         $responses['messages']['0']['template']['columns'][2]['thumnnailImageUrl'] = NULL;
-        $responses['messages']['0']['template']['columns'][2]['imageBackgroundColor'] = "#FFFFFF";
+        $responses['messages']['0']['template']['columns'][2]['imageBackgroundColor'] = "#FF00FF";
         $responses['messages']['0']['template']['columns'][2]['title'] = 'Result 3';
         $responses['messages']['0']['template']['columns'][2]['text'] = substr($json['2']['title'],0,55);
         $responses['messages']['0']['template']['columns'][2]['actions'][0]['type'] = 'uri';
         $responses['messages']['0']['template']['columns'][2]['actions'][0]['label'] = 'URL';
         $responses['messages']['0']['template']['columns'][2]['actions'][0]['uri'] = $json['2']['url'];
         $responses['messages']['0']['template']['columns'][3]['thumnnailImageUrl'] = NULL;
-        $responses['messages']['0']['template']['columns'][3]['imageBackgroundColor'] = "#FFFFFF";
+        $responses['messages']['0']['template']['columns'][3]['imageBackgroundColor'] = "#FF00FF";
         $responses['messages']['0']['template']['columns'][3]['title'] = 'Result 4';
         $responses['messages']['0']['template']['columns'][3]['text'] = substr($json['3']['title'],0,55);
         $responses['messages']['0']['template']['columns'][3]['actions'][0]['type'] = 'uri';
         $responses['messages']['0']['template']['columns'][3]['actions'][0]['label'] = 'URL';
         $responses['messages']['0']['template']['columns'][3]['actions'][0]['uri'] = $json['3']['url'];
         $responses['messages']['0']['template']['columns'][4]['thumnnailImageUrl'] = NULL;
-        $responses['messages']['0']['template']['columns'][4]['imageBackgroundColor'] = "#FFFFFF";
+        $responses['messages']['0']['template']['columns'][4]['imageBackgroundColor'] = "#FF00FF";
         $responses['messages']['0']['template']['columns'][4]['title'] = 'Result 5';
         $responses['messages']['0']['template']['columns'][4]['text'] = substr($json['4']['title'],0,55);
         $responses['messages']['0']['template']['columns'][4]['actions'][0]['type'] = 'uri';
@@ -766,10 +766,10 @@ if ($command == '/jam') {
                     array ( 
                       0 =>  
                       array ( 
-                        'thumbnailImageUrl' => 'https://preview.ibb.co/gXGfLU/20180913_194713.jpg', 
+                        'thumbnailImageUrl' => 'https://lh3.googleusercontent.com/-PyB9SWHrjLA/XkXUeDdiQZI/AAAAAAAABtI/nUTNSgszj5MYENb6S7f8SdlYRNUk4cAkgCK8BGAsYHg/s500/2020-02-13.gif', 
                         'imageBackgroundColor' => '#FFFFFF', 
-                        'title' => 'WIB', 
-                        'text' => 'Jam iran WIB', 
+                        'title' => 'CREATOR BOT', 
+                        'text' => '☻▬═✿ᖼOᗱᗴℕ✿═▬☻', 
                         'actions' =>  
                         array ( 
                           0 =>  
@@ -788,10 +788,10 @@ if ($command == '/jam') {
                       ), 
                       1 =>  
                       array ( 
-                        'thumbnailImageUrl' => 'https://preview.ibb.co/nxaPfU/20180913_194725.jpg', 
+                        'thumbnailImageUrl' => 'https://lh3.googleusercontent.com/-x7FdoClGz0M/XsP26-b_FoI/AAAAAAAAEyU/KmkmCjDFeF0ljDkEp-TynApjGR1Nsq_8wCK8BGAsYHg/s512/2020-05-19.png', 
                         'imageBackgroundColor' => '#000000', 
                         'title' => 'WIT', 
-                        'text' => 'Jam iran WIT', 
+                        'text' => '☻▬═★ᖼᗱO꓅★═▬☻', 
                         'actions' =>  
                         array ( 
                           0 =>  
@@ -810,10 +810,10 @@ if ($command == '/jam') {
                       ), 
                       2 =>  
                       array ( 
-                        'thumbnailImageUrl' => 'https://preview.ibb.co/cPdc0U/20180913_194744.jpg', 
+                        'thumbnailImageUrl' => 'https://lh3.googleusercontent.com/-01ffSpLcBfw/XoQRI4a2wYI/AAAAAAAAD0k/oAZE-diXGPw4XGoh4Cm45wMvHB3HOamdgCK8BGAsYHg/s424/2020-03-31.png', 
                         'imageBackgroundColor' => '#000000', 
-                        'title' => 'WITA', 
-                        'text' => 'Jam iran WITA', 
+                        'title' => '☻▬═Ƥєяѕιαη═▬☻', 
+                        'text' => '♡ᶫᵒᵛᵉᵧₒᵤ♡ᴾᵉʳˢᶤᵃᶰ♡ᵇᵒᵗ♡', 
                         'actions' =>  
                         array ( 
                           0 =>  
@@ -845,7 +845,7 @@ if($message['type']=='text') {
             'messages' => array(
                 array (
   'type' => 'flex',
-  'altText' => 'this is a flex message',
+  'altText' => '☻▬═★ᖼOᗱᗴℕ★═▬☻',
   'contents' => 
   array (
     'type' => 'bubble',
@@ -966,7 +966,7 @@ if($message['type']=='text') {
             'messages' => array( 
                 array (
   'type' => 'flex',
-  'altText' => 'this is a flex message',
+  'altText' => '☻▬═★ᖼOᗱᗴℕ★═▬☻',
   'contents' => 
   array (
     'type' => 'bubble',
@@ -1007,6 +1007,25 @@ if($message['type']=='text') {
         );
     }
 }
+if($message['type']=='text') {
+	    if ($command == '-lokasi' || $command == '-Lokasi') {
+
+        $result = lokasi($options);
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'location',
+                    'title' => 'Lokasi',
+                    'address' => $result['address'],
+                    'latitude' => $result['latitude'],
+                    'longitude' => $result['longitude']
+                ),
+            )
+        );
+    }
+
+}
 #-------------------------[Close]-------------------------#
 #-------------------------[Open]-------------------------#
 if($message['type']=='text') {
@@ -1018,7 +1037,7 @@ if($message['type']=='text') {
             'messages' => array(
                 array (
   'type' => 'flex',
-  'altText' => 'this is a flex message',
+  'altText' => '☻▬═★ᖼOᗱᗴℕ★═▬☻',
   'contents' => 
   array (
     'type' => 'bubble',
@@ -1056,7 +1075,7 @@ if($message['type']=='text') {
                 ),
                 array (
   'type' => 'flex',
-  'altText' => 'this is a flex message',
+  'altText' => '☻▬═★ᖼOᗱᗴℕ★═▬☻',
   'contents' => 
   array (
     'type' => 'bubble',
@@ -1090,7 +1109,7 @@ if($message['type']=='text') {
             'messages' => array( 
                 array ( 
                         'type' => 'template', 
-                          'altText' => 'About Creator mBot', 
+                          'altText' => '☻▬═★ᖼOᗱᗴℕ★═▬☻', 
                           'template' =>  
                           array ( 
                             'type' => 'buttons', 
@@ -1124,7 +1143,7 @@ if($message['type']=='text') {
             'messages' => array(
                 array (
   'type' => 'flex',
-  'altText' => 'this is a flex message',
+  'altText' => '☻▬═★ᖼOᗱᗴℕ★═▬☻',
   'contents' => 
   array (
     'type' => 'bubble',
@@ -1159,7 +1178,7 @@ if($message['type']=='text') {
             'messages' => array(
                 array (
   'type' => 'flex',
-  'altText' => 'this is a flex message',
+  'altText' => '☻▬═★ᖼOᗱᗴℕ★═▬☻',
   'contents' => 
   array (
     'type' => 'bubble',
@@ -1194,7 +1213,7 @@ if($message['type']=='text') {
             'messages' => array(
                 array (
   'type' => 'flex',
-  'altText' => 'this is a flex message',
+  'altText' => '☻▬═★ᖼOᗱᗴℕ★═▬☻',
   'contents' => 
   array (
     'type' => 'bubble',
@@ -1218,6 +1237,100 @@ if($message['type']=='text') {
         );
     }
 }
+//fitur sound cloud
+if($message['type']=='sticker'){	
+	$result = stickerlist($options);
+	$balas = array(
+		'replyToken' => $replyToken,														
+		'messages' => array(
+			array(
+		            'type' => 'sticker', // sesuaikan
+                            'packageId' => 1, // sesuaikan
+                            'stickerId' => $result// sesuaikan										
+									
+									)
+							)
+						);
+						
+}
+
+
+//fitur sound cloud
+if($message['type']=='text') {
+	    if ($command == '/location' || $command == '/Location') {
+        $result = lokasi($options);
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'location',
+                    'title' => 'Lokasi',
+                    'address' => $result['address'],
+                    'latitude' => $result['latitude'],
+                    'longitude' => $result['longitude']
+                ),
+            )
+        );
+    }
+}
+//fitur sound cloud
+if($message['type']=='text') {
+	    if ($command == 'Halo' || $command == 'Hai' ) {
+
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'text',
+                    'text' => 'Hallo '.$profil->displayName
+                )
+            )
+        );
+    }
+}
+//pesan bergambar
+if($message['type']=='text') {
+	    if ($command == 'Hi' || $command == 'Hallo' ) {
+
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'text',
+                    'text' => 'Hallo '.$profil->displayName
+                )
+            )
+        );
+    }
+}
+//pesan bergambar
+if($message['type']=='text') {
+	    if ($command == '/soundcloud' || $command == '/Soundcloud') {
+        $result = cloud($options);
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+		    array(
+                  'type' => 'image',
+                  'originalContentUrl' => $result['icon'],
+                  'previewImageUrl' => $result['icon']
+                ),
+                array(
+                    'type' => 'text',
+                    'text' => 'ID: '.$result['id'].'
+TITLE: '. $result['judul'].'
+URL: '. $result['link']
+                ),
+		    array(
+                  'type' => 'audio',
+                  'originalContentUrl' => $result['audio'],
+                  'duration' => 60000
+                )
+            )
+        );
+    }
+}
+//fitur sound cloud
 if($message['type']=='text') {
         if ($command == '/wikipedia') {
 
@@ -1227,7 +1340,7 @@ if($message['type']=='text') {
             'messages' => array(
                 array (
   'type' => 'flex',
-  'altText' => 'this is a flex message',
+  'altText' => '☻▬═★ᖼOᗱᗴℕ★═▬☻',
   'contents' => 
   array (
     'type' => 'bubble',
@@ -1260,7 +1373,7 @@ if($message['type']=='text') {
             'messages' => array(
                 array (
                   'type' => 'flex',
-                  'altText' => 'this is a flex message',
+                  'altText' => '☻▬═★ᖼOᗱᗴℕ★═▬☻',
                   'contents' => 
                   array (
                     'type' => 'bubble',
@@ -1295,7 +1408,7 @@ if($message['type']=='text') {
             'messages' => array( 
                 array ( 
                         'type' => 'template', 
-                          'altText' => 'Qiblat shalat', 
+                          'altText' => '☻▬═★ᖼOᗱᗴℕ★═▬☻', 
                           'template' =>  
                           array ( 
                             'type' => 'buttons', 
@@ -1336,6 +1449,120 @@ if($message['type']=='text') {
     }
 }
 #----------------------------------#
+function stickerlist($keyword) {
+    $listnya = array(
+	    "1",
+	    "2",
+	    "3",
+	    "4",
+	    "00000",
+	    "13",
+	    "10",
+	    "402",
+	    "401",
+	    "17",
+	    "16",
+	    "00000",
+	    "405",
+	    "5",
+	    "404",
+	    "406",
+	    "21",
+	    "9",
+	    "103",
+	    "102",
+	    "00000",
+	    "8",
+	    "101",
+	    "00000",
+	    "6",
+	    "104",
+	    "00000",
+	    "108",
+	    "109",
+	    "00000",
+	    "110",
+	    "00000",
+	    "111",
+	    "112",
+	    "113",
+	    "00000",
+	    "114",
+	    "115",
+	    "116",
+	    "117",
+	    "0000000",
+	    "118",
+	    "0000000",
+	    "407",
+	    "0000000",
+	    "408",
+	    "409",
+	    "000000",
+	    "410",
+	    "411",
+	    "412",
+	    "00000",
+	    "413",
+	    "414",
+	    "00000",
+	    "415",
+	    "416",
+	    "00000",
+	    "417",
+	    "418",
+	    "419",
+	    "00000",
+	    "420",
+	    "421",
+	    "422",
+	    "00000",
+	    "423",
+	    "424",
+	    "00000",
+	    "425",
+	    "426",
+	    "427",
+	    "00000",
+	    "428",
+	    "429",
+	    "430",
+	    "00000",
+	    "119",
+	    "120",
+	    "121",
+	    "122",
+	    "00000",
+	    "123",
+	    "124",
+	    "00000",
+	    "125",
+	    "126",
+	    "127",
+	    "128",
+	    "00000",
+	    "129",
+	    "00000",
+	    "130",
+	    "131",
+	    "00000",
+	    "132",
+	    "133",
+	    "00000",
+	    "134",
+	    "135",
+	    "00000",
+	    "136",
+	    "137",
+	    "138",
+	    "00000",
+	    "139",
+	    );
+            $jaws = array_rand($listnya);
+            $result = $listnya[$jaws];
+    return $result;
+}
+#==================================#
 if($message['type']=='text') {
         if ($command == 'Help' || $command == 'help') {
         $balas = array(
@@ -1381,7 +1608,7 @@ if($message['type']=='text') {
                           ),
                           3 => 
                           array (
-                            'imageUrl' => 'https://bestanimations.com/HomeOffice/Clocks/clock-animated-gif-5.gif',
+                            'imageUrl' => 'https://lh3.googleusercontent.com/-EWqDkz1gzY4/XuI__pX_PEI/AAAAAAAAFNY/01WudjTlRREEkqkQfEvRjsyoQwGfeDfOACK8BGAsYHg/s500/2020-06-11.gif',
                             'action' => 
                             array (
                               'type' => 'message',
@@ -1401,7 +1628,7 @@ if($message['type']=='text') {
                           ),
                           5 => 
                           array (
-                            'imageUrl' => 'https://2.bp.blogspot.com/-rj1nxBPkzT0/UEJCW4qHsGI/AAAAAAAAAu0/6xKNlKRHi9U/s1600/perahi+kertas.jpg',
+                            'imageUrl' => 'https://lh3.googleusercontent.com/-v1sBgGSY1JI/XuJFjna8bUI/AAAAAAAAFPU/UojTQufTmU4eYISUVgOJcf6gI-fr_uCrgCK8BGAsYHg/s512/2020-06-11.gif',
                             'action' => 
                             array (
                               'type' => 'message',
@@ -1431,7 +1658,7 @@ if($message['type']=='text') {
                           ),
                           8 => 
                           array (
-                            'imageUrl' => 'https://us.123rf.com/450wm/nulinukas/nulinukas1202/nulinukas120200019/12251019-boy-watching-tv-cartoon.jpg?ver=6',
+                            'imageUrl' => 'https://lh3.googleusercontent.com/-x7FdoClGz0M/XsP26-b_FoI/AAAAAAAAEyU/KmkmCjDFeF0ljDkEp-TynApjGR1Nsq_8wCK8BGAsYHg/s512/2020-05-19.png',
                             'action' => 
                             array (
                               'type' => 'message',
@@ -1536,7 +1763,7 @@ if($message['type']=='text') {
             'messages' => array( 
                 array ( 
                         'type' => 'template', 
-                          'altText' => 'Light teks', 
+                          'altText' => '☻▬═★ᖼOᗱᗴℕ★═▬☻', 
                           'template' =>  
                           array ( 
                             'type' => 'buttons', 
