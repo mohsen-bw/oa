@@ -2107,7 +2107,6 @@ if ($message['type'] == 'text') {
             )
         );
     }
-
 }                
 //pesan bergambar
 if($message['type']=='text') {
