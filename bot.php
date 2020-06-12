@@ -2017,8 +2017,7 @@ if($message['type']=='text') {
                 array(
                     'type' => 'text',
                     'text'  => 'Searching...'
-                ),
-                array(
+                ), array(
                     'type' => 'text',
                     'text' => $result
                 )
