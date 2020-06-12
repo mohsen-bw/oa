@@ -1597,45 +1597,6 @@ function cuaca($keyword) {
     return $result;
 }
 #-------------------------[Function]-------------------------#
-function urb_dict($keyword) {
-    $uri = "http://api.urbandictionary.com/v0/define?term=" . $keyword;
-
-    $response = Unirest\Request::get("$uri");
-
-    $json = json_decode($response->raw_body, true);
-    $result = $json['list'][0]['definition'];
-    $result .= "\n\nExamples : \n";
-    $result .= $json['list'][0]['example'];
-    return $result;
-}
-#-------------------------[Function]-------------------------#
-function qrcode($keyword) {
-    $uri = "http://chart.googleapis.com/chart?cht=qr&chs=300x300&chl=" . $keyword;
-
-    return $uri;
-}
-#-------------------------[Function]-------------------------#
-function adfly($url, $key, $uid, $domain = 'adf.ly', $advert_type = 'int')
-{
-  // base api url
-  $api = 'http://api.adf.ly/api.php?';
-
-  // api queries
-  $query = array(
-    '7970aaad57427df04129cfe2cfcd0584' => $key,
-    '16519547' => $uid,
-    'advert_type' => $advert_type,
-    'domain' => $domain,
-    'url' => $url
-  );
-
-  // full api url with query string
-  $api = $api . http_build_query($query);
-  // get data
-  if ($data = file_get_contents($api))
-    return $data;
-}
-#----------------#
 function send($input, $rt){
     $send = array(
         'replyToken' => $rt,
