@@ -1567,16 +1567,6 @@ function saveitoffline($keyword) {
     return $result;
 }
 #-------------------------[Function]-------------------------#
-function qibla($keyword) { 
-    $uri = "https://time.siswadi.com/qibla/" . $keyword; 
- 
-    $response = Unirest\Request::get("$uri"); 
- 
-    $json = json_decode($response->raw_body, true); 
- $result .= $json['data']['image'];
-    return $result; 
-}
-// ----- LOCATION BY Prank -----
 function lokasi($keyword) { 
     $uri = "https://time.siswadi.com/pray/" . $keyword; 
  
@@ -1805,55 +1795,6 @@ Picture: '.$profil->pictureUrl.'
 	}
 }
 //pesan bergambar
-if ($message['type'] == 'text') {
-    if ($command == '-def') {
-
-
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array(
-                    'type' => 'text',
-                    'text' => 'Definition : ' . urb_dict($options)
-                )
-            )
-        );
-    }
-}
-if($msg_type == 'text'){
-    $pesan_datang = strtolower($message['text']);
-    $filter = explode(' ', $pesan_datang);
-    if($filter[0] == 'apakah') {
-        $balas = send(jawabs(), $replyToken);
-    } else {}
-} if($msg_type == 'text'){
-    $pesan_datang = strtolower($message['text']);
-    $filter = explode(' ', $pesan_datang);
-    if($filter[0] == 'bisakah') {
-        $balas = send(bisa(), $replyToken);
-    } else {}
-} if($msg_type == 'text'){
-    $pesan_datang = strtolower($message['text']);
-    $filter = explode(' ', $pesan_datang);
-    if($filter[0] == 'kapankah') {
-        $balas = send(kapan(), $replyToken);
-    } else {}
-} if($msg_type == 'text'){
-    $pesan_datang = strtolower($message['text']);
-    $filter = explode(' ', $pesan_datang);
-    if($filter[0] == 'rate') {
-        $balas = send(dosa(), $replyToken);
-    } else {}
-} if($msg_type == 'text'){
-    $pesan_datang = strtolower($message['text']);
-    $filter = explode(' ', $pesan_datang);
-    if($filter[0] == 'dosanya') {
-		$balas = send(dosa2(), $replyToken);
-		$balas = send(dosa(), $replyToken);
-		$balas = send(dosa3(), $replyToken);
-    } else {}
-} else {}
-//translate//
 if($message['type']=='text') {
 	    if ($command == '/tr-ar') {
 
@@ -1869,6 +1810,7 @@ if($message['type']=='text') {
         );
     }
 }
+//pesan bergambar
 if($message['type']=='text') {
 	    if ($command == '/tr-ja') {
 
@@ -1884,6 +1826,7 @@ if($message['type']=='text') {
         );
     }
 }
+//pesan bergambar
 if($message['type']=='text') {
 	    if ($command == '/tr-id') {
 
@@ -1899,6 +1842,7 @@ if($message['type']=='text') {
         );
     }
 }
+//pesan bergambar
 if($message['type']=='text') {
 	    if ($command == '/tr-en') {
 
@@ -1914,6 +1858,7 @@ if($message['type']=='text') {
         );
     }
 }
+//pesan bergambar
 if($message['type']=='text') {
 	    if ($command == '-say') {
 
@@ -1929,6 +1874,7 @@ if($message['type']=='text') {
         );
     }
 }
+//pesan bergambar
 if($message['type']=='text') {
 	    if ($command == '-youtube') {
 
@@ -1944,6 +1890,7 @@ if($message['type']=='text') {
         );
     }
 }
+//pesan bergambar
 if($message['type']=='text') {
 	    if ($command == '-gitclone') {
 
@@ -1959,6 +1906,7 @@ if($message['type']=='text') {
         );
     }
 }
+//pesan bergambar
 if($message['type']=='text') {
 	    if ($command == '-qiblat') {
         $hasil = qibla($options);
@@ -2007,6 +1955,7 @@ if($message['type']=='text') {
         );
     }
 }
+//pesan bergambar
 if($message['type']=='text') {
 	    if ($command == '-playstore') {
 
@@ -2313,6 +2262,7 @@ if($message['type']=='text') {
         );
     }
 }
+//pesan bergambar
 if($message['type']=='text') {
         if ($command == '-movie') {
         $result = film_syn($options);
