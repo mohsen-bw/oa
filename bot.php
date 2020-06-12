@@ -1117,14 +1117,14 @@ if($message['type']=='text') {
                             'imageAspectRatio' => 'rectangle', 
                             'imageSize' => 'cover', 
                             'imageBackgroundColor' => '#FFFFFF', 
-                            'title' => 'Muhammad Raihan P.', 
-                            'text' => 'Creator RpdBot', 
+                            'title' => 'TEAM BOT PERSIAN', 
+                            'text' => 'Creator MOSEN', 
                             'actions' =>  
                             array ( 
                               0 =>  
                               array ( 
                                 'type' => 'uri', 
-                                'label' => 'Contact', 
+                                'label' => 'ADD ME', 
                                 'uri' => 'https://line.me/ti/p/~m_bw', 
                               ), 
                             ), 
@@ -1238,14 +1238,14 @@ if($message['type']=='text') {
     }
 }
 //fitur sound cloud
-if($message['type']=='sticker'){	
+if($message['type']=='/sticker'){	
 	$result = stickerlist($options);
 	$balas = array(
 		'replyToken' => $replyToken,														
 		'messages' => array(
 			array(
 		            'type' => 'sticker', // sesuaikan
-                            'packageId' => 1, // sesuaikan
+                            'packageId' => 1,2,11537 // sesuaikan
                             'stickerId' => $result// sesuaikan										
 									
 									)
@@ -1275,14 +1275,14 @@ if($message['type']=='text') {
 }
 //fitur sound cloud
 if($message['type']=='text') {
-	    if ($command == 'Halo' || $command == 'Hai' ) {
+	    if ($command == 'سلام' || $command == 'سیلام' ) {
 
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
                 array(
                     'type' => 'text',
-                    'text' => 'Hallo '.$profil->displayName
+                    'text' => 'ســ͢͜͡✾ٜٜٜٜٜٜٖٖٖٖٜ̂̂̂̂̂̂͢͜͡✾ـلــام گـ͢͜͡✾ٜٜٜٜٜٜٖٖٖٖٜ̂̂̂̂̂̂͢͜͡✾ـــلم '.$profil->displayName
                 )
             )
         );
@@ -1290,14 +1290,29 @@ if($message['type']=='text') {
 }
 //pesan bergambar
 if($message['type']=='text') {
-	    if ($command == 'Hi' || $command == 'Hallo' ) {
+	    if ($command == 'hi' || $command == 'Hi' ) {
 
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
                 array(
                     'type' => 'text',
-                    'text' => 'Hallo '.$profil->displayName
+                    'text' => 'Hello '.$profil->displayName
+                )
+            )
+        );
+    }
+}
+//pesan bergambar
+if($message['type']=='text') {
+	    if ($command == 'Helo' || $command == 'helo' ) {
+
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'text',
+                    'text' => 'Hello '.$profil->displayName
                 )
             )
         );
@@ -1453,7 +1468,38 @@ function stickerlist($keyword) {
     $listnya = array(
 	    "1",
 	    "2",
-	    "3",
+	    "52002734",
+	    "52002735",
+	    "52002736",
+	    "52002737",
+	    "52002738",
+	    "52002739",
+	    "52002740",
+	    "52002741",
+	    "52002742",
+	    "52002743",
+	    "52002744",
+	    "52002745",
+	    "52002746",
+	    "52002747",
+	    "52002748",
+	    "52002749",
+	    "52002750",
+	    "52002751",
+	    "52002752",
+	    "52002753",
+	    "52002754",
+	    "52002755",
+	    "52002756",
+	    "52002757",
+	    "52002758",
+	    "52002759",
+	    "52002760",
+	    "52002761",
+	    "52002762",
+	    "52002763",
+	    "52002764",
+	    "52002765",
 	    "4",
 	    "00000",
 	    "13",
@@ -1578,7 +1624,7 @@ if($message['type']=='text') {
                         array (
                           0 => 
                           array (
-                            'imageUrl' => 'https://is5-ssl.mzstatic.com/image/thumb/Purple118/v4/64/c9/6f/64c96f0c-0202-09f6-78b5-1ef915086215/Prod-1x_U007emarketing-85-220-0-5.png/246x0w.jpg',
+                            'imageUrl' => 'https://lh3.googleusercontent.com/-Bo_W3NMCdMg/XlT3z96j8UI/AAAAAAAACgQ/o3-EkHl0nS8tE8LM1jQmMYa-BekExrICgCK8BGAsYHg/s300/2020-02-25.gif',
                             'action' => 
                             array (
                               'type' => 'message',
@@ -1588,7 +1634,7 @@ if($message['type']=='text') {
                           ),
                           1 => 
                           array (
-                            'imageUrl' => 'https://rest.farzain.com/api/photofunia/neon_sign.php?text=RpdBot&apikey=fDh6y7ZwXJ24eiArhGEJ55HgA',
+                            'imageUrl' => 'https://lh3.googleusercontent.com/-Z0YUCbMxt4c/XuJEv6JoxjI/AAAAAAAAFPA/ENBi9F03b6IMVfIYnlGlj79nC1JrNyfhgCK8BGAsYHg/s512/2020-06-11.gif',
                             'action' => 
                             array (
                               'type' => 'message',
