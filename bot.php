@@ -2095,19 +2095,6 @@ if ($message['type'] == 'text') {
     }
 }
 //pesan bergambar
-        $result = quotes($options);
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array(
-                    'type' => 'text',
-                    'text'  => $result
-                )
-            )
-        );
-    }
-}                
-//pesan bergambar
 if($message['type']=='text') {
 	    if ($command == '-convert') {
         $result = saveitoffline($options);
