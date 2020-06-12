@@ -1731,130 +1731,6 @@ function dosa3(){
     $jawab = $list_jwb[$jaws];
     return($jawab);
 }
-#-------------------------[Function]-------------------------#
-//fitur sound cloud
-//pesan bergambar
-if ($message['type'] == 'text') {
-    if ($command == 'image1':
-				$line_server_url = 'https://api.line.me/v2/bot/message/reply';
-				$response = array (
-					"replyToken" => $sender_replyToken,
-					"messages" => array (
-						array (
-							"type" => "image",
-							"originalContentUrl" => "https://lh3.googleusercontent.com/-HcDZgVVjs3c/XuJExojaIjI/AAAAAAAAFPE/n0lu-jCX3NkFkZ1lvcq4SPFlaqUZTq_3ACK8BGAsYHg/s256/2020-06-11.gif",
-							"previewImageUrl" => "https://www.nasa.gov/sites/default/themes/NASAPortal/images/feed.png"
-						)
-					)
-				);
-//pesan bergambar
-if ($message['type'] == 'text') {
-    if ($command == 'image2':
-				$line_server_url = 'https://api.line.me/v2/bot/message/reply';
-				$response = array (
-					"replyToken" => $sender_replyToken,
-					"messages" => array (
-						array (
-							"type" => "image",
-							"originalContentUrl" => "https://lh3.googleusercontent.com/-SdYHyUvp8nY/XuJGRs6mYRI/AAAAAAAAFPc/H5KpC9WDvAETYOIT1sPBeDdvNNHoRjmPQCK8BGAsYHg/s351/2020-06-11.gif",
-							"previewImageUrl" => "https://www.nasa.gov/sites/default/themes/NASAPortal/images/feed.png"
-						)
-					)
-				);
-//pesan bergambar
-if ($message['type'] == 'text') {
-    if ($command == 'image':
-				$line_server_url = 'https://api.line.me/v2/bot/message/reply';
-				$response = array (
-					"replyToken" => $sender_replyToken,
-					"messages" => array (
-						array (
-							"type" => "image",
-							"originalContentUrl" => "https://www.w3schools.com/css/paris.jpg",
-							"previewImageUrl" => "https://www.nasa.gov/sites/default/themes/NASAPortal/images/feed.png"
-						)
-					)
-				);
-//pesan bergambar
-if ($message['type'] == 'text') {
-    if ($command == 'location':
-				$line_server_url = 'https://api.line.me/v2/bot/message/reply';
-				$response = array (
-					"replyToken" => $sender_replyToken,
-					"messages" => array (
-						array (
-							"type" => "location",
-							"title" => "my location",
-							"address" => "〒150-0002 東京都渋谷区渋谷２丁目２１−１",
-							"latitude" => 35.65910807942215,
-							"longitude" => 139.70372892916203
-						)
-					)
-				);
-//pesan bergambar
-if ($message['type'] == 'text') {
-    if ($command == 'sticker':
-				$line_server_url = 'https://api.line.me/v2/bot/message/reply';
-				$response = array (
-					"replyToken" => $sender_replyToken,
-					"messages" => array (
-						array (
-							"type" => "sticker",
-							"packageId" => "1",
-							"stickerId" => "1"
-						)
-					)
-				);
-//pesan bergambar
-if ($message['type'] == 'text') {
-    if ($command == 'button':
-				$line_server_url = 'https://api.line.me/v2/bot/message/reply';
-				$response = array (
-					"replyToken" => $sender_replyToken,
-					"messages" => array (
-						array (
-							"type" => "template",
-							"altText" => "this is a buttons template",
-							"template" => array (
-								"type" => "buttons",
-								"thumbnailImageUrl" => "https://www.w3schools.com/css/paris.jpg",
-								"title" => "Menu",
-								"text" => "Please select",
-								"actions" => array (
-									array (
-										"type" => "postback",
-										"label" => "Buy",
-										"data" => "action=buy&itemid=123"
-									),
-									array (
-										"type" => "postback",
-										"label" => "Add to cart",
-										"data" => "action=add&itemid=123"
-									)
-								)
-							)
-						)
-					)
-				);
-//pesan bergambar
-if($message['type']=='text') {
-	    if ($command == '/location' || $command == '/Location') {
-        $result = lokasi($options);
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array(
-                    'type' => 'location',
-                    'title' => 'Lokasi',
-                    'address' => $result['address'],
-                    'latitude' => $result['latitude'],
-                    'longitude' => $result['longitude']
-                ),
-            )
-        );
-    }
-}
-//fitur sound cloud
 //show menu, saat join dan command,menu
 if ($type == 'join' || $command == 'Help') {
     $text .= "♥Ƥєяѕιαη♥вσт♥\n\n";
@@ -2151,9 +2027,71 @@ if($message['type']=='text') {
     }
 
 }
-if($message['type']=='text') {
-	    if ($command == '-quotes') {
-
+//pesan bergambar
+if ($message['type'] == 'text') {
+        if ($command == 'image2':
+        $line_server_url = 'https://api.line.me/v2/bot/message/reply';
+        $response = array (
+            "replyToken" => $sender_replyToken,
+            "messages" => array (
+                array (
+                    "type" => "image",
+                    "originalContentUrl" => "https://lh3.googleusercontent.com/-HcDZgVVjs3c/XuJExojaIjI/AAAAAAAAFPE/n0lu-jCX3NkFkZ1lvcq4SPFlaqUZTq_3ACK8BGAsYHg/s256/2020-06-11.gif",
+                    "previewImageUrl" => "https://www.nasa.gov/sites/default/themes/NASAPortal/images/feed.png"
+                )
+            )
+        );
+    }
+}
+//pesan bergambar
+if ($message['type'] == 'text') {
+        if ($command == 'image1':
+        $line_server_url = 'https://api.line.me/v2/bot/message/reply';
+        $response = array (
+            "replyToken" => $sender_replyToken,
+            "messages" => array (
+                array (
+                    "type" => "image",
+                    "originalContentUrl" => "https://lh3.googleusercontent.com/-SdYHyUvp8nY/XuJGRs6mYRI/AAAAAAAAFPc/H5KpC9WDvAETYOIT1sPBeDdvNNHoRjmPQCK8BGAsYHg/s351/2020-06-11.gif",
+                    "previewImageUrl" => "https://www.nasa.gov/sites/default/themes/NASAPortal/images/feed.png"
+                )
+            )
+        );
+    }
+}
+//pesan bergambar
+if ($message['type'] == 'text') {
+        if ($command == 'image':
+        $line_server_url = 'https://api.line.me/v2/bot/message/reply';
+        $response = array (
+            "replyToken" => $sender_replyToken,
+            "messages" => array (
+                array (
+                    "type" => "image",
+                    "originalContentUrl" => "https://lh3.googleusercontent.com/-SdYHyUvp8nY/XuJGRs6mYRI/AAAAAAAAFPc/H5KpC9WDvAETYOIT1sPBeDdvNNHoRjmPQCK8BGAsYHg/s351/2020-06-11.gif",
+                    "previewImageUrl" => "https://www.nasa.gov/sites/default/themes/NASAPortal/images/feed.png"
+                )
+            )
+        );
+    }
+}
+//pesan bergambar
+if ($message['type'] == 'text') {
+        if ($command == 'sticker':
+        $line_server_url = 'https://api.line.me/v2/bot/message/reply';
+        $response = array (
+            "replyToken" => $sender_replyToken,
+            "messages" => array (
+                array (
+                    "type" => "sticker",
+                    "packageId" => "1",
+                    "stickerId" => "1"
+                )
+            )
+        );
+    }
+}
+//pesan bergambar
         $result = quotes($options);
         $balas = array(
             'replyToken' => $replyToken,
@@ -2234,7 +2172,7 @@ if($message['type']=='text') {
     }
 }
 if($message['type']=='text') {
-	    if ($command == '-ytlink') {
+     if ($command == '-ytlink') {
         $keyword = '';
         $image = 'https://img.youtube.com/vi/' . $keyword . '/2.jpg';
         $balas = array(
