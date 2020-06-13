@@ -2369,6 +2369,51 @@ if($message['type']=='text') {
 }
 //pesan bergambar
 if($message['type']=='text') {
+        if ($command == 'باتمن' || $command == 'باتی' ) {
+
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'text',
+                    'text' => 'جـٍٍـٍونم عزیـٍٍـٍزم '.$profil->displayName
+                )
+            )
+        );
+    }
+}
+//pesan bergambar
+if($message['type']=='text') {
+        if ($command == 'فعلا' || $command == 'بای' ) {
+
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'text',
+                    'text' => 'برو کـٍٍـٍه برنگـٍٍـٍردی '.$profil->displayName
+                )
+            )
+        );
+    }
+}
+//pesan bergambar
+if($message['type']=='text') {
+        if ($command == 'باتمن‌‌' || $command == 'با‌‌تمن‌‌' ) {
+
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'text',
+                    'text' => 'جونـٍٍـٍم عـٍٍـٍشقم '.$profil->displayName
+                )
+            )
+        );
+    }
+}
+//pesan bergambar
+if($message['type']=='text') {
 	    if ($command == 'hi' || $command == 'Hi' ) {
 
         $balas = array(
@@ -2543,6 +2588,37 @@ if($message['type']=='text') {
     }
 }
 #----------------------------------#
+if($message['type']=='text') {
+        if ($command == 'mosn' || $command == 'Mosn') {
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array (
+                      'type' => 'template',
+                      'altText' => '☻▬═★ᖼOᗱᗴℕ★═▬☻',
+                      'template' => 
+                      array (
+                        'type' => 'image_carousel',
+                        'columns' => 
+                        array (
+                          0 => 
+                          array (
+                            'imageUrl' => 'https://lh3.googleusercontent.com/-Bo_W3NMCdMg/XlT3z96j8UI/AAAAAAAACgQ/o3-EkHl0nS8tE8LM1jQmMYa-BekExrICgCK8BGAsYHg/s300/2020-02-25.gif',
+                            'action' => 
+                            array (
+                              'type' => 'message',
+                              'label' => 'mosn',
+                              'text' => '☻▬═★ᖼOᗱᗴℕ★═▬☻',
+                            ),
+                          ),
+                        ),
+                      ),
+                    )
+            )
+        );
+    }
+}
+#-------------------------[Open]-------------------------#
 #==================================#
 if($message['type']=='text') {
         if ($command == 'Help' || $command == 'help') {
